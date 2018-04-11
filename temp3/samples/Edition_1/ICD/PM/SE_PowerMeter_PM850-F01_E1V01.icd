@@ -1,0 +1,3009 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Private type="SchneiderElectric-SFT-EditTime">2011-05-11 14:35:11</Private>
+  <Private type="SchneiderElectric-SFT-Version">3.1.1</Private>
+  <Header id="ICD File" nameStructure="IEDName" revision="0" toolID="SFT850" version="1"/>
+  <Communication>
+    <SubNetwork name="SN1" type="8-MMS">
+      <ConnectedAP apName="AP1" iedName="TEMPLATE">
+        <Address>
+          <P type="IP" xsi:type="tP_IP">0.0.0.0</P>
+          <P type="IP-SUBNET" xsi:type="tP_IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY" xsi:type="tP_IP-GATEWAY">0.0.0.0</P>
+          <P type="OSI-PSEL" xsi:type="tP_OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL" xsi:type="tP_OSI-SSEL">0001</P>
+          <P type="OSI-TSEL" xsi:type="tP_OSI-TSEL">0001</P>
+        </Address>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED configVersion="1.0" desc="" manufacturer="Schneider Electric" name="TEMPLATE" type="PM8">
+    <Services>
+      <DynAssociation/>
+      <SettingGroups/>
+      <GetDirectory/>
+      <GetDataObjectDefinition/>
+      <DataObjectDirectory/>
+      <GetDataSetValue/>
+      <DataSetDirectory/>
+      <ConfDataSet max="32" modify="true"/>
+      <ReadWrite/>
+      <ConfReportControl max="48"/>
+      <GetCBValues/>
+      <ReportSettings bufTime="Dyn" cbName="Conf" datSet="Conf" intgPd="Dyn" optFields="Dyn" rptID="Dyn" trgOps="Dyn"/>
+      <FileHandling/>
+      <ConfLNs fixLnInst="true" fixPrefix="true"/>
+    </Services>
+    <AccessPoint name="AP1">
+      <Server>
+        <Private type="SchneiderElectric-SFT-Timeout">1000</Private>
+        <Private type="SchneiderElectric-SFT-Retries">3</Private>
+        <Authentication none="true"/>
+        <LDevice desc="PM850" inst="PM850_2_LD1">
+          <Private type="SchneiderElectric-SFT-IcdFileName">SE_PowerMeter_PM850-F01_E1V01.icd</Private>
+          <Private type="SchneiderElectric-SFT-IedVersion">0000</Private>
+          <Private type="SchneiderElectric-SFT-IedName">PowerMeter</Private>
+          <Private type="SchneiderElectric-SFT-IedFamily">PM</Private>
+          <Private type="SchneiderElectric-SFT-IedAppli">PM850</Private>
+          <Private type="SchneiderElectric-IED-DevModel">800:PM850</Private>
+          <Private type="SchneiderElectric-IED-CommType">MODBUS</Private>
+          <Private type="SchneiderElectric-IED-MdbAddr">2</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">44C:4BD:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">4CE:4E1:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">514:58B:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">58C:59E:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">640:653:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">6A4:6F5:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">712:714:M:L</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">731:73C:M:L</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">7A8:7D6:M:L</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">866:88B:M:L</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">BC3:BC3:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">BDA:BE3:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">C80:C80:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">C9B:CAE:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">CC6:CC8:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">F47:F47:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">10CC:1143:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">1144:11BB:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">11BC:1233:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">1234:12AB:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">12AC:12E7:M</Private>
+          <LN0 desc="General" inst="" lnClass="LLN0" lnType="SE_LLN0_PM8_V001">
+            <DataSet desc="Default status reporting dataset" name="StDs">
+              <FCDA doName="DmdVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="CND_"/>
+              <FCDA doName="DmdWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="CND_"/>
+              <FCDA doName="SupVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="CND_"/>
+              <FCDA doName="SupWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="CND_"/>
+              <FCDA doName="TotVAh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="CND_"/>
+              <FCDA doName="ZMtrDPC" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix=""/>
+              <FCDA doName="ZMtrInd" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix=""/>
+              <FCDA doName="DmdVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="INC_"/>
+              <FCDA doName="DmdWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="INC_"/>
+              <FCDA doName="SupVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="INC_"/>
+              <FCDA doName="SupWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="INC_"/>
+              <FCDA doName="TotVAh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="INC_"/>
+              <FCDA doName="DmdVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix=""/>
+              <FCDA doName="DmdWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix=""/>
+              <FCDA doName="SupVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix=""/>
+              <FCDA doName="SupWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix=""/>
+              <FCDA doName="TotVAh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix=""/>
+              <FCDA doName="TotVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix=""/>
+              <FCDA doName="TotWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix=""/>
+              <FCDA doName="ZMtrDPC1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P22_"/>
+              <FCDA doName="ZMtrDPC2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P22_"/>
+              <FCDA doName="ZMtrInd1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P22_"/>
+              <FCDA doName="ZMtrInd2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P22_"/>
+              <FCDA doName="ZMtrDPC1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P22_"/>
+              <FCDA doName="ZMtrDPC2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P22_"/>
+              <FCDA doName="ZMtrInd1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P22_"/>
+              <FCDA doName="ZMtrInd2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P22_"/>
+              <FCDA doName="ZMtrDPC1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P26_"/>
+              <FCDA doName="ZMtrDPC2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P26_"/>
+              <FCDA doName="ZMtrInd1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P26_"/>
+              <FCDA doName="ZMtrInd2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P26_"/>
+              <FCDA doName="ZMtrInd3" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P26_"/>
+              <FCDA doName="ZMtrInd4" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P26_"/>
+              <FCDA doName="ZMtrInd5" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P26_"/>
+              <FCDA doName="ZMtrInd6" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P26_"/>
+              <FCDA doName="ZMtrDPC1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P26_"/>
+              <FCDA doName="ZMtrDPC2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P26_"/>
+              <FCDA doName="ZMtrInd1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P26_"/>
+              <FCDA doName="ZMtrInd2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P26_"/>
+              <FCDA doName="ZMtrInd3" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P26_"/>
+              <FCDA doName="ZMtrInd4" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P26_"/>
+              <FCDA doName="ZMtrInd5" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P26_"/>
+              <FCDA doName="ZMtrInd6" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P26_"/>
+              <FCDA doName="ZMtrDPC1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P2x_"/>
+              <FCDA doName="ZMtrDPC2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P2x_"/>
+              <FCDA doName="ZMtrInd1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P2x_"/>
+              <FCDA doName="ZMtrInd2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="1" prefix="P2x_"/>
+              <FCDA doName="ZMtrDPC1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P2x_"/>
+              <FCDA doName="ZMtrDPC2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P2x_"/>
+              <FCDA doName="ZMtrInd1" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P2x_"/>
+              <FCDA doName="ZMtrInd2" fc="ST" ldInst="PM850_2_LD1" lnClass="GGIO" lnInst="2" prefix="P2x_"/>
+              <FCDA doName="DmdVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="PII_"/>
+              <FCDA doName="DmdWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="PII_"/>
+              <FCDA doName="SupVArh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="PII_"/>
+              <FCDA doName="SupWh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="PII_"/>
+              <FCDA doName="TotVAh" fc="ST" ldInst="PM850_2_LD1" lnClass="MMTR" lnInst="1" prefix="PII_"/>
+            </DataSet>
+            <DataSet desc="Default measurands reporting dataset" name="MxDs">
+              <FCDA doName="A" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix="FND_"/>
+              <FCDA doName="PhV" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix="FND_"/>
+              <FCDA doName="ThdA" fc="MX" ldInst="PM850_2_LD1" lnClass="MHAI" lnInst="1" prefix=""/>
+              <FCDA doName="ThdPPV" fc="MX" ldInst="PM850_2_LD1" lnClass="MHAI" lnInst="1" prefix=""/>
+              <FCDA doName="ZThdPhV" fc="MX" ldInst="PM850_2_LD1" lnClass="MHAI" lnInst="1" prefix=""/>
+              <FCDA doName="A" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="Hz" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="PF" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="PhV" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="PPV" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="TotPF" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="TotVA" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="TotVAr" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="TotW" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="VA" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="VAr" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="W" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="ZPFDsp" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="ZTotPFDsp" fc="MX" ldInst="PM850_2_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+              <FCDA doName="ImbA" fc="MX" ldInst="PM850_2_LD1" lnClass="MSQI" lnInst="1" prefix=""/>
+              <FCDA doName="ImbPPV" fc="MX" ldInst="PM850_2_LD1" lnClass="MSQI" lnInst="1" prefix=""/>
+              <FCDA doName="ImbV" fc="MX" ldInst="PM850_2_LD1" lnClass="MSQI" lnInst="1" prefix=""/>
+              <FCDA doName="MaxImbA" fc="MX" ldInst="PM850_2_LD1" lnClass="MSQI" lnInst="1" prefix="SLR_"/>
+            </DataSet>
+            <ReportControl bufTime="100" buffered="true" confRev="1" datSet="StDs" desc="Default Status Report" intgPd="0" name="brcbST" rptID="StRpt">
+              <TrgOps dchg="true" dupd="false" period="true" qchg="true"/>
+              <OptFields bufOvfl="false" configRef="true" dataRef="true" dataSet="true" entryID="true" reasonCode="true" segmentation="false" seqNum="true" timeStamp="true"/>
+              <RptEnabled max="2"/>
+            </ReportControl>
+            <ReportControl bufTime="500" buffered="true" confRev="1" datSet="MxDs" desc="Default Status Report" intgPd="0" name="brcbMX" rptID="MxRpt">
+              <TrgOps dchg="true" dupd="false" period="true" qchg="true"/>
+              <OptFields bufOvfl="false" configRef="true" dataRef="true" dataSet="true" entryID="true" reasonCode="true" segmentation="false" seqNum="true" timeStamp="true"/>
+              <RptEnabled max="2"/>
+            </ReportControl>
+            <DOI name="Mod">
+              <Private type="SchneiderElectric-IED-PntRef">T:IO;L:P:305</Private>
+            </DOI>
+            <DOI name="OpTmh">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;L:P:302</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:3034:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrType">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:3011:FFFF;L:P:29</Private>
+            </DOI>
+            <DOI name="ZWrType">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:3200:u1;L:P:32</Private>
+            </DOI>
+          </LN0>
+          <LN desc="" inst="1" lnClass="MSTA" lnType="SE_MSTAEx7_PM8_V001" prefix="CMO_">
+            <DOI name="ZRsMinMax"/>
+          </LN>
+          <LN desc="Energy counters" inst="1" lnClass="MMTR" lnType="SE_MMTREx1_PM8_V001" prefix="CND_">
+            <DOI name="DmdVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1732:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="DmdWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1728:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="SupVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1740:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="SupWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1736:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="TotVAh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1744:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="ZRsEnr"/>
+          </LN>
+          <LN desc="Measurements maximum current" inst="1" lnClass="MSTA" lnType="SE_MSTAEx4_PM8_V001" prefix="DSP_">
+            <DOI name="ZMaxPF">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1368:u1;N:-3;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1365:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinPF">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1363:u1;N:-3;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1360:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="Measurements" inst="1" lnClass="MMXU" lnType="SE_MMXUEx1_PM8_V001" prefix="FND_">
+            <DOI name="A">
+              <SDI name="neut">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;m:1236:u1;R:3210;m:1237:u1;N:-1;L:P:32</Private>
+                <DAI desc="1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;m:1230:u1;R:3209;m:1231:u1;N:-1;L:P:32</Private>
+                <DAI desc="1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;m:1232:u1;R:3209;m:1233:u1;N:-1;L:P:32</Private>
+                <DAI desc="1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;m:1234:u1;R:3209;m:1235:u1;N:-1;L:P:32</Private>
+                <DAI desc="1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="PhV">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;m:1244:u1;R:3212;m:1245:u1;N:-1;L:P:32</Private>
+                <DAI desc="1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;m:1246:u1;R:3212;m:1247:u1;N:-1;L:P:32</Private>
+                <DAI desc="1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;m:1248:u1;R:3212;m:1249:u1;N:-1;L:P:32</Private>
+                <DAI desc="1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+          </LN>
+          <LN desc="General Input Output" inst="1" lnClass="GGIO" lnType="SE_GGIO_PM8_V001" prefix="">
+            <DOI name="SPCSO">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4300;m:4325:1;L:P:25</Private>
+            </DOI>
+            <DOI name="ZMtrDPC">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4301:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4300;m:4312:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4326:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4328:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4300;m:4325:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4300;m:4313:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4300:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4330;m:4355:1;L:P:22</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4331:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4356:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4358:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4347:u1;R:4348;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4330:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd1">
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:20600</Private>
+              </SDI>
+            </DOI>
+            <DOI name="ZRsInMtr"/>
+          </LN>
+          <LN desc="Energy counters" inst="1" lnClass="MMTR" lnType="SE_MMTREx2_PM8_V001" prefix="INC_">
+            <DOI name="DmdVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1751:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="DmdWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1748:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="SupVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1757:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="SupWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1754:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="TotVAh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1760:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="ZEndInvAlm">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:10700</Private>
+            </DOI>
+          </LN>
+          <LN desc="Physical Device" inst="1" lnClass="LPHD" lnType="SE_LPHD_PM8_V001" prefix="">
+            <DOI name="PhyNam">
+              <DAI name="model" valKind="Set">
+                <Val>PM850</Val>
+              </DAI>
+              <DAI desc="can be freely used" name="location" valKind="Set">
+                <Val>location</Val>
+              </DAI>
+            </DOI>
+            <DOI name="NumPwrUp">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;m:3043:u1;L:P:33</Private>
+            </DOI>
+            <DOI name="PhyHealth">
+              <Private type="SchneiderElectric-IED-PntRef">T:IO;L:P:303</Private>
+            </DOI>
+            <DOI name="Proxy">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;L:P:304</Private>
+            </DOI>
+            <DOI name="PwrUp">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;L:P:302</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:3039:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="RsStat"/>
+            <DOI name="ZDiag">
+              <SDI name="almLrnEnd1">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:12500:5</Private>
+              </SDI>
+              <SDI name="dskLoWP">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:12500:23</Private>
+              </SDI>
+              <SDI name="enFlkEx">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:10;L:P:26</Private>
+              </SDI>
+              <SDI name="enHV">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:800;L:P:26</Private>
+              </SDI>
+              <SDI name="enHz">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:2;L:P:26</Private>
+              </SDI>
+              <SDI name="enMagVVar">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:8;L:P:26</Private>
+              </SDI>
+              <SDI name="enShrtOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:100;L:P:26</Private>
+              </SDI>
+              <SDI name="enSum">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:1;L:P:26</Private>
+              </SDI>
+              <SDI name="enSupVDipEx">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:20;L:P:26</Private>
+              </SDI>
+              <SDI name="enSupVLng">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:80;L:P:26</Private>
+              </SDI>
+              <SDI name="enSupVShrt">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:40;L:P:26</Private>
+              </SDI>
+              <SDI name="enSupVUBEx">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:400;L:P:26</Private>
+              </SDI>
+              <SDI name="enSupVVarEx">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:4;L:P:26</Private>
+              </SDI>
+              <SDI name="enTHD">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:1000;L:P:26</Private>
+              </SDI>
+              <SDI name="enTrsOvVEx">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:3911:200;L:P:26</Private>
+              </SDI>
+            </DOI>
+            <DOI name="ZMtrInit"/>
+            <DOI name="ZPhsRvAlm">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:32280510</Private>
+            </DOI>
+            <DOI name="ZRsAlm"/>
+            <DOI name="ZRsAlmSum"/>
+            <DOI name="ZRsBill"/>
+            <DOI name="ZRsData1"/>
+            <DOI name="ZRsData2"/>
+            <DOI name="ZRsData3"/>
+            <DOI name="ZRsDateTm"/>
+            <DOI name="ZRsENEval"/>
+            <DOI name="ZRsEnrSum"/>
+            <DOI name="ZRsEnrTrnd"/>
+            <DOI name="ZRsPQSum"/>
+            <DOI name="ZRsSESum"/>
+            <DOI name="ZRsTrFor"/>
+            <DOI name="ZRsWFC"/>
+          </LN>
+          <LN desc="Harmonics" inst="1" lnClass="MHAI" lnType="SE_MHAI_PM8_V001" prefix="">
+            <DOI name="ThdA">
+              <SDI name="neut">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1203:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1200:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1201:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1202:u1;N:-1;L:P:32</Private>
+              </SDI>
+            </DOI>
+            <DOI name="ThdPPV">
+              <SDI name="phsAB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1211:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsBC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1212:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsCA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1213:u1;N:-1;L:P:32</Private>
+              </SDI>
+            </DOI>
+            <DOI name="ZClcMthTHD">
+              <Private type="SchneiderElectric-IED-PntRef">T:EN;m:3227:400;L:P:229</Private>
+            </DOI>
+            <DOI name="ZFFTEn">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:3240:FFFF;L:P:29</Private>
+            </DOI>
+            <DOI name="ZFFTHldRem">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:3244:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="ZFFTHldTm">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:3243:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="ZFFTProcSt">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:3246:FFFF;L:P:29</Private>
+            </DOI>
+            <DOI name="ZThdPhV">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1207:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1208:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1209:u1;N:-1;L:P:32</Private>
+              </SDI>
+            </DOI>
+          </LN>
+          <LN desc="Energy counters" inst="1" lnClass="MMTR" lnType="SE_MMTR_PM8_V001" prefix="">
+            <DOI name="DmdVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1704:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="DmdWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1700:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="SupVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1712:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="SupWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1708:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="TotVAh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1724:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="TotVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1720:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="TotWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1716:u4;L:P:13</Private>
+            </DOI>
+            <DOI name="ZRsTot"/>
+          </LN>
+          <LN desc="Measurements" inst="1" lnClass="MMXU" lnType="SE_MMXU_PM8_V001" prefix="">
+            <DOI name="A">
+              <SDI name="neut">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1103:u1;R:3210;L:P:32</Private>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1100:u1;R:3209;L:P:32</Private>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1101:u1;R:3209;L:P:32</Private>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1102:u1;R:3209;L:P:32</Private>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="zavg">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1105:u1;R:3209;L:P:32</Private>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="Hz">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1180:u1;R:3208;L:P:32</Private>
+              <DAI desc="unit: 0.1Hz" name="db" valKind="Set">
+                <Val>1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="PF">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1160:u1;m:1190:u1;L:P:51</Private>
+                <DAI desc="unit: 0.001" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1161:u1;m:1191:u1;L:P:51</Private>
+                <DAI desc="unit: 0.001" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1162:u1;m:1192:u1;L:P:51</Private>
+                <DAI desc="unit: 0.001" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="PhV">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1124:u1;R:3212;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>5</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1125:u1;R:3212;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>5</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1126:u1;R:3212;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>5</Val>
+                </DAI>
+              </SDI>
+              <SDI name="zavg">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1128:u1;R:3212;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="zgnd">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1127:u1;R:3213;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="PPV">
+              <SDI name="phsAB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1120:u1;R:3212;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsBC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1121:u1;R:3212;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsCA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1122:u1;R:3212;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="zavg">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1123:u1;R:3212;L:P:32</Private>
+                <DAI desc="unit:1V" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="TotPF">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1163:u1;m:1193:u1;L:P:51</Private>
+              <DAI desc="unit: 0.001" name="db" valKind="Set">
+                <Val>1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="TotVA">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1151:u1;R:3214;L:P:32</Private>
+              <DAI desc="unit: 1kVA" name="db" valKind="Set">
+                <Val>1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="TotVAr">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1147:u1;R:3214;L:P:32</Private>
+              <DAI desc="unit: 1kVAr" name="db" valKind="Set">
+                <Val>1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="TotW">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1143:u1;R:3214;L:P:32</Private>
+              <DAI desc="unit: 1kW" name="db" valKind="Set">
+                <Val>1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VA">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1148:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kVA" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1149:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kVA" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1150:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kVA" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="VAr">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1144:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kVAr" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1145:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kVAr" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1146:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kVAr" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="W">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1140:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kW" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1141:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kW" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1142:u1;R:3214;L:P:32</Private>
+                <DAI desc="unit: 1kW" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="ZPFDsp">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1168:u1;m:1194:u1;L:P:51</Private>
+                <DAI desc="unit: 0.001" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1169:u1;m:1195:u1;L:P:51</Private>
+                <DAI desc="unit: 0.001" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1170:u1;m:1196:u1;L:P:51</Private>
+                <DAI desc="unit: 0.001" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="ZTotPFDsp">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1171:u1;m:1197:u1;L:P:51</Private>
+              <DAI desc="unit: 0.001" name="db" valKind="Set">
+                <Val>1</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="Measurements maximum current" inst="1" lnClass="MSQI" lnType="SE_MSQI_PM8_V001" prefix="">
+            <DOI name="ImbA">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1107:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1108:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1109:u1;N:-1;L:P:32</Private>
+              </SDI>
+            </DOI>
+            <DOI name="ImbPPV">
+              <SDI name="phsAB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1129:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsBC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1130:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsCA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1131:u1;N:-1;L:P:32</Private>
+              </SDI>
+            </DOI>
+            <DOI name="ImbV">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1133:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1134:u1;N:-1;L:P:32</Private>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1135:u1;N:-1;L:P:32</Private>
+              </SDI>
+            </DOI>
+            <DOI name="MaxImbPPV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1338:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1335:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1339:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxImbV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1348:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1345:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1349:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MinImbPPV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1333:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1330:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1334:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinImbV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1343:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1340:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1344:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="Metering Statistics" inst="1" lnClass="MSTA" lnType="SE_MSTA_PM8_V001" prefix="">
+            <DOI name="AvAmps">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2000:u1;R:3209;L:P:32</Private>
+            </DOI>
+            <DOI name="AvAmps1">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1960:u1;R:3209;L:P:32</Private>
+            </DOI>
+            <DOI name="AvAmps2">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1970:u1;R:3209;L:P:32</Private>
+            </DOI>
+            <DOI name="AvAmps3">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1980:u1;R:3209;L:P:32</Private>
+            </DOI>
+            <DOI name="AvAmps4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1990:u1;R:3210;L:P:32</Private>
+            </DOI>
+            <DOI name="AvVA">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2180:u1;R:3214;L:P:32</Private>
+            </DOI>
+            <DOI name="AvVAr">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2165:u1;R:3214;L:P:32</Private>
+            </DOI>
+            <DOI name="AvW">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2150:u1;R:3214;L:P:32</Private>
+            </DOI>
+            <DOI name="MaxAmps">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2003:u1;R:3209;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:2004:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxAmps1">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1963:u1;R:3209;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1964:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxAmps2">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1973:u1;R:3209;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1974:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxAmps3">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1983:u1;R:3209;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1984:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxAmps4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1993:u1;R:3210;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1994:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxVA">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2184:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:2185:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxVAr">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2169:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:2170:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxW">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2154:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:2155:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="RsMax"/>
+            <DOI name="RsMaxA">
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1810:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="RsMaxPwr">
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1850:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZEndInvAlm">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:20700</Private>
+            </DOI>
+            <DOI name="ZWDmdInt">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1841:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="ZWDmdSInt">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1842:u1;L:P:32</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QIVR" lnType="SE_QIVREx2_PM8_V001" prefix="OA_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11000100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx8_PM8_V001" prefix="OA_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11240200</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11240100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx7_PM8_V001" prefix="OAB_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11200200</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11200100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx1_PM8_V001" prefix="OABT_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:12110100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx2_PM8_V001" prefix="OAT_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:12070100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QIVR" lnType="SE_QIVREx3_PM8_V001" prefix="OB_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11010100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx10_PM8_V001" prefix="OB_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11250200</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11250100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx9_PM8_V001" prefix="OBC_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11210200</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11210100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx3_PM8_V001" prefix="OBCT_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:12120100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx4_PM8_V001" prefix="OBT_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:12080100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QIVR" lnType="SE_QIVREx4_PM8_V001" prefix="OC_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11020100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx12_PM8_V001" prefix="OC_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11260200</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11260100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx11_PM8_V001" prefix="OCA_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11220200</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11220100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx5_PM8_V001" prefix="OCAT_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:12130100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx6_PM8_V001" prefix="OCT_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:12090100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QIVR" lnType="SE_QIVREx5_PM8_V001" prefix="ON_">
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11030100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QPVR" lnType="SE_QPVREx2_PM8_V001" prefix="OVA_">
+            <DOI name="ZOvPwrStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11510110</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QPVR" lnType="SE_QPVREx3_PM8_V001" prefix="OVAD_">
+            <DOI name="ZOvPwrStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:21810110</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QPVR" lnType="SE_QPVREx5_PM8_V001" prefix="OW_">
+            <DOI name="ZOvPwrStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11430110</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QPVR" lnType="SE_QPVREx4_PM8_V001" prefix="OWD_">
+            <DOI name="ZOvPwrStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:21510110</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVUB" lnType="SE_QVUBEx1_PM8_V001" prefix="OWLL_">
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11320100</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVUB" lnType="SE_QVUBEx2_PM8_V001" prefix="OWLN_">
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11360100</Private>
+            </DOI>
+          </LN>
+          <LN desc="General Input Output" inst="1" lnClass="GGIO" lnType="SE_GGIOEx1_PM8_V001" prefix="P22_">
+            <DOI name="ZMtrDPC1">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4361:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4360;m:4372:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4386:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4388:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4360;m:4385:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4360;m:4373:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4360:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrDPC2">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4391:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4390;m:4402:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4416:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4418:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4390;m:4415:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4390;m:4403:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4390:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd1">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4420;m:4445:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:50600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4421:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4446:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4448:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4437:u1;R:4438;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4420:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd2">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4450;m:4475:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:60600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4451:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4476:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4478:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4467:u1;R:4468;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4450:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="General Input Output" inst="2" lnClass="GGIO" lnType="SE_GGIOEx1_PM8_V001" prefix="P22_">
+            <DOI name="ZMtrDPC1">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4601:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4600;m:4612:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4626:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4628:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4600;m:4625:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4600;m:4613:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4600:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrDPC2">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4631:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4630;m:4642:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4656:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4658:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4630;m:4655:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4630;m:4643:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4630:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd1">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4660;m:4685:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:130600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4661:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4686:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4688:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4677:u1;R:4678;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4660:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd2">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4690;m:4715:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:140600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4691:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4716:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4718:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4707:u1;R:4708;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4690:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="General Input Output" inst="1" lnClass="GGIO" lnType="SE_GGIOEx2_PM8_V001" prefix="P26_">
+            <DOI name="ZMtrDPC1">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4361:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4360;m:4372:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4386:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4388:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4360;m:4385:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4360;m:4373:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4360:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrDPC2">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4391:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4390;m:4402:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4416:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4418:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4390;m:4415:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4390;m:4403:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4390:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd1">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4420;m:4445:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:50600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4421:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4446:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4448:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4437:u1;R:4438;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4420:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd2">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4450;m:4475:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:60600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4451:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4476:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4478:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4467:u1;R:4468;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4450:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd3">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4480;m:4505:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:70600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4481:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4506:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4508:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4497:u1;R:4498;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4480:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd4">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4510;m:4535:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:80600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4511:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4536:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4538:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4527:u1;R:4528;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4510:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd5">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4540;m:4565:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:90600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4541:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4566:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4568:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4557:u1;R:4558;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4540:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd6">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4570;m:4595:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:100600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4571:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4596:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4598:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4587:u1;R:4588;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4570:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="General Input Output" inst="2" lnClass="GGIO" lnType="SE_GGIOEx2_PM8_V001" prefix="P26_">
+            <DOI name="ZMtrDPC1">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4601:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4600;m:4612:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4626:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4628:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4600;m:4625:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4600;m:4613:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4600:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrDPC2">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4631:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4630;m:4642:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4656:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4658:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4630;m:4655:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4630;m:4643:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4630:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd1">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4660;m:4685:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:130600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4661:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4686:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4688:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4677:u1;R:4678;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4660:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd2">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4690;m:4715:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:140600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4691:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4716:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4718:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4707:u1;R:4708;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4690:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd3">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4720;m:4745:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:150600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4721:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4746:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4748:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4737:u1;R:4738;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4720:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd4">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4750;m:4775:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:160600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4751:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4776:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4778:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4767:u1;R:4768;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4750:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd5">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4780;m:4805:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:170600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4781:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4806:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4808:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4797:u1;R:4798;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4780:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd6">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4810;m:4835:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:180600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4811:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4836:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4838:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4827:u1;R:4828;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4810:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="General Input Output" inst="1" lnClass="GGIO" lnType="SE_GGIOEx3_PM8_V001" prefix="P2x_">
+            <DOI name="ZMtrDPC1">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4361:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4360;m:4372:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4386:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4388:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4360;m:4385:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4360;m:4373:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4360:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrDPC2">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4391:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4390;m:4402:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4416:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4418:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4390;m:4415:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4390;m:4403:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4390:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd1">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4420;m:4445:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:50600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4421:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4446:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4448:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4437:u1;R:4438;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4420:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd2">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4450;m:4475:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:60600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4451:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4476:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4478:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4467:u1;R:4468;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4450:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="General Input Output" inst="2" lnClass="GGIO" lnType="SE_GGIOEx3_PM8_V001" prefix="P2x_">
+            <DOI name="ZMtrDPC1">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4601:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4600;m:4612:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4626:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4628:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4600;m:4625:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4600;m:4613:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4600:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrDPC2">
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4631:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zLocKey">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4630;m:4642:1;L:P:25</Private>
+              </SDI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4656:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4658:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zPos">
+                <Private type="SchneiderElectric-IED-PntRef">T:DS;m:4630;m:4655:1;L:P:24</Private>
+              </SDI>
+              <SDI name="zRemCtlOv">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4630;m:4643:1;L:P:25</Private>
+              </SDI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4630:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd1">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4660;m:4685:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:130600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4661:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4686:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4688:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4677:u1;R:4678;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4660:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMtrInd2">
+              <SDI name="zInd">
+                <Private type="SchneiderElectric-IED-PntRef">T:SS;m:4690;m:4715:1;L:P:22</Private>
+              </SDI>
+              <SDI name="zIndAlm">
+                <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:140600</Private>
+              </SDI>
+              <DAI name="zlbl">
+                <Private type="SchneiderElectric-IED-PntRef">A:VS;m:4691:u8;L:P:39</Private>
+              </DAI>
+              <SDI name="zOpCnt">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4716:u2;L:P:11</Private>
+              </SDI>
+              <SDI name="zOpTmms">
+                <Private type="SchneiderElectric-IED-PntRef">T:BC;m:4718:u2;L:P:11</Private>
+              </SDI>
+              <DAI name="zplsWt">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4707:u1;R:4708;L:P:42</Private>
+              </DAI>
+              <DAI name="ztype">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:4690:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="Predicted entities" inst="1" lnClass="MSTA" lnType="SE_MSTAEx2_PM8_V001" prefix="PDT_">
+            <DOI name="AvVA">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2183:u1;R:3214;L:P:32</Private>
+            </DOI>
+            <DOI name="AvVAr">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2168:u1;R:3214;L:P:32</Private>
+            </DOI>
+            <DOI name="AvW">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2153:u1;R:3214;L:P:32</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QPVR" lnType="SE_QPVREx1_PM8_V001" prefix="PF_">
+            <DOI name="ZLgStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11630550</Private>
+            </DOI>
+          </LN>
+          <LN desc="Energy counters" inst="1" lnClass="MMTR" lnType="SE_MMTREx3_PM8_V001" prefix="PII_">
+            <DOI name="DmdVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1770:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="DmdWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1767:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="SupVArh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1776:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="SupWh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1773:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="TotVAh">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;m:1779:u3;L:P:13</Private>
+            </DOI>
+            <DOI name="ZRsEnrInt"/>
+          </LN>
+          <LN desc="" inst="1" lnClass="MSTA" lnType="SE_MSTAEx6_PM8_V001" prefix="PMO_">
+            <DOI name="ZRsMinMax"/>
+          </LN>
+          <LN desc="Measurements maximum current" inst="1" lnClass="MSTA" lnType="SE_MSTAEx1_PM8_V001" prefix="PRS_">
+            <DOI name="AvAmps">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2001:u1;R:3209;L:P:32</Private>
+            </DOI>
+            <DOI name="AvAmps1">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1961:u1;R:3209;L:P:32</Private>
+            </DOI>
+            <DOI name="AvAmps2">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1971:u1;R:3209;L:P:32</Private>
+            </DOI>
+            <DOI name="AvAmps3">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1981:u1;R:3209;L:P:32</Private>
+            </DOI>
+            <DOI name="AvAmps4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1991:u1;R:3210;L:P:32</Private>
+            </DOI>
+            <DOI name="AvVA">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2181:u1;R:3214;L:P:32</Private>
+            </DOI>
+            <DOI name="AvVAr">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2166:u1;R:3214;L:P:32</Private>
+            </DOI>
+            <DOI name="AvW">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:2151:u1;R:3214;L:P:32</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QIUB" lnType="SE_QIUB_PM8_V001" prefix="">
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:11100100</Private>
+            </DOI>
+          </LN>
+          <LN desc="Measurements predicted" inst="1" lnClass="MSQI" lnType="SE_MSQIEx1_PM8_V001" prefix="SLR_">
+            <DOI name="MaxImbA">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1110:u1;N:-1;L:P:32</Private>
+            </DOI>
+            <DOI name="MaxImbPPV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1132:u1;N:-1;L:P:32</Private>
+            </DOI>
+            <DOI name="MaxImbV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1136:u1;N:-1;L:P:32</Private>
+            </DOI>
+          </LN>
+          <LN desc="Measurements maximum current" inst="1" lnClass="MSTA" lnType="SE_MSTAEx3_PM8_V001" prefix="SLR_">
+            <DOI name="MaxAmps">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1328:u1;R:3209;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1325:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1329:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxAmps4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1618:u1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1615:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1619:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxVA">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1398:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1395:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxVAr">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1388:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1385:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MaxW">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1378:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1375:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MinAmps">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1323:u1;R:3209;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1320:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1324:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MinAmps4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1613:u1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1610:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1614:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MinVA">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1393:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1390:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MinVAr">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1383:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1380:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MinW">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1373:u1;R:3214;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1370:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMaxHz">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1438:u1;R:3208;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1435:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMaxPF">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1358:u1;N:-3;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1355:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMaxPhV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1318:u1;R:3212;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1315:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1319:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMaxPhV4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1608:u1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1605:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1609:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMaxPPV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1308:u1;R:3212;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1305:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1309:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinHz">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1433:u1;R:3208;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1430:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinPF">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1353:u1;N:-3;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1350:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinPhV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1313:u1;R:3212;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1310:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1314:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinPhV4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1603:u1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1600:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1604:u1;L:P:32</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinPPV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1303:u1;R:3212;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1300:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1304:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZRsMinMax">
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:3270:u3;L:P:1</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx14_PM8_V001" prefix="SSA_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:40900</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:40800</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx13_PM8_V001" prefix="SSAB_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:10900</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:10800</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx16_PM8_V001" prefix="SSB_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:50900</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:50800</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx15_PM8_V001" prefix="SSBC_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:20900</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:20800</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx18_PM8_V001" prefix="SSC_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:60900</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:60800</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx17_PM8_V001" prefix="SSCA_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:30900</Private>
+            </DOI>
+            <DOI name="SwlStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:30800</Private>
+            </DOI>
+          </LN>
+          <LN desc="Measurements maximum current" inst="1" lnClass="MSTA" lnType="SE_MSTAEx5_PM8_V001" prefix="THD_">
+            <DOI name="MaxAmps">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1428:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1425:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1429:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="MinAmps">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1423:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1420:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1424:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMaxPhV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1418:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1415:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1419:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMaxPPV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1408:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1405:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1409:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinPhV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1413:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1410:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1414:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+            <DOI name="ZMinPPV">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:1403:u1;N:-1;L:P:32</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:1400:u3;L:P:1</Private>
+              </DAI>
+              <DAI name="zPhs">
+                <Private type="SchneiderElectric-IED-PntRef">A:I4;m:1404:FFFF;L:P:29</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QIVR" lnType="SE_QIVREx1_PM8_V001" prefix="TotL_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:32620530</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="QVVR" lnType="SE_QVVREx19_PM8_V001" prefix="TotL_">
+            <DOI name="DipStr">
+              <Private type="SchneiderElectric-IED-PntRef">T:ALM;F:5;q:32620520</Private>
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="SE_MSTAEx7_PM8_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="ZRsMinMax" transient="false" type="SE_SpcEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MMTREx1_PM8_V001" iedType="" lnClass="MMTR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="DmdVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="DmdWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="SupVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="SupWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="TotVAh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="ZRsEnr" transient="false" type="SE_SpcEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTAEx4_PM8_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="ZMaxPF" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="ZMinPF" transient="false" type="SE_MvEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MMXUEx1_PM8_V001" iedType="" lnClass="MMXU">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="A" transient="false" type="SE_WyeAngABCn_PM8_V001"/>
+      <DO name="PhV" transient="false" type="SE_WyeAngABC_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_GGIO_PM8_V001" iedType="" lnClass="GGIO">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="SPCSO" transient="false" type="SE_Spc_PM8_V001"/>
+      <DO name="ZMtrDPC" transient="false" type="SE_ZdoDPC_PM8_V001"/>
+      <DO name="ZMtrInd" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZMtrInd1" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZRsInMtr" transient="false" type="SE_SpcEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MMTREx2_PM8_V001" iedType="" lnClass="MMTR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="DmdVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="DmdWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="SupVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="SupWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="TotVAh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="ZEndInvAlm" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_LLN0_PM8_V001" iedType="" lnClass="LLN0">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplLLN0_PM8_V001"/>
+      <DO name="OpTmh" transient="false" type="SE_Ins_PM8_V001"/>
+      <DO name="ZMtrType" transient="false" type="SE_InsEx_PM8_V001"/>
+      <DO name="ZWrType" transient="false" type="SE_InsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_LPHD_PM8_V001" iedType="" lnClass="LPHD">
+      <DO name="PhyNam" transient="false" type="SE_Dpl_PM8_V001"/>
+      <DO name="NumPwrUp" transient="false" type="SE_Ins_PM8_V001"/>
+      <DO name="PhyHealth" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="Proxy" transient="false" type="SE_Sps_PM8_V001"/>
+      <DO name="PwrUp" transient="false" type="SE_Sps_PM8_V001"/>
+      <DO name="RsStat" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZDiag" transient="false" type="SE_Zdiag_PM8_V001"/>
+      <DO name="ZMtrInit" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZPhsRvAlm" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="ZRsAlm" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsAlmSum" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsBill" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsData1" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsData2" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsData3" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsDateTm" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsENEval" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsEnrSum" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsEnrTrnd" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsPQSum" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsSESum" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsTrFor" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZRsWFC" transient="false" type="SE_SpcEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MHAI_PM8_V001" iedType="" lnClass="MHAI">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="ThdA" transient="false" type="SE_WyeABCn_PM8_V001"/>
+      <DO name="ThdPPV" transient="false" type="SE_Del_PM8_V001"/>
+      <DO name="ZClcMthTHD" transient="false" type="SE_IngEx_PM8_V001"/>
+      <DO name="ZFFTEn" transient="false" type="SE_InsEx_PM8_V001"/>
+      <DO name="ZFFTHldRem" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="ZFFTHldTm" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="ZFFTProcSt" transient="false" type="SE_InsEx_PM8_V001"/>
+      <DO name="ZThdPhV" transient="false" type="SE_WyeABC_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MMTR_PM8_V001" iedType="" lnClass="MMTR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="DmdVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="DmdWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="SupVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="SupWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="TotVAh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="TotVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="TotWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="ZRsTot" transient="false" type="SE_SpcEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MMXU_PM8_V001" iedType="" lnClass="MMXU">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="A" transient="false" type="SE_WyeABCna_PM8_V001"/>
+      <DO name="Hz" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="PF" transient="false" type="SE_WyeABC_PM8_V001"/>
+      <DO name="PhV" transient="false" type="SE_WyeABCag_PM8_V001"/>
+      <DO name="PPV" transient="false" type="SE_DelEx_PM8_V001"/>
+      <DO name="TotPF" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="TotVA" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="TotVAr" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="TotW" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="VA" transient="false" type="SE_WyeABC_PM8_V001"/>
+      <DO name="VAr" transient="false" type="SE_WyeABC_PM8_V001"/>
+      <DO name="W" transient="false" type="SE_WyeABC_PM8_V001"/>
+      <DO name="ZPFDsp" transient="false" type="SE_WyeABC_PM8_V001"/>
+      <DO name="ZTotPFDsp" transient="false" type="SE_Mv_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSQI_PM8_V001" iedType="" lnClass="MSQI">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="ImbA" transient="false" type="SE_WyeABC_PM8_V001"/>
+      <DO name="ImbPPV" transient="false" type="SE_Del_PM8_V001"/>
+      <DO name="ImbV" transient="false" type="SE_WyeABC_PM8_V001"/>
+      <DO name="MaxImbPPV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="MaxImbV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="MinImbPPV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMinImbV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTA_PM8_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="AvAmps" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvAmps1" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="AvAmps2" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="AvAmps3" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="AvAmps4" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="AvVA" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvVAr" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvW" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="MaxAmps" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="MaxAmps1" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MaxAmps2" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MaxAmps3" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MaxAmps4" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MaxVA" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="MaxVAr" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="MaxW" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="RsMax" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="RsMaxA" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="RsMaxPwr" transient="false" type="SE_SpcEx_PM8_V001"/>
+      <DO name="ZEndInvAlm" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="ZWDmdInt" transient="false" type="SE_IngEx_PM8_V001"/>
+      <DO name="ZWDmdSInt" transient="false" type="SE_IngEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QIVREx2_PM8_V001" iedType="" lnClass="QIVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx8_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx7_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx1_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx2_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QIVREx3_PM8_V001" iedType="" lnClass="QIVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx10_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx9_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx3_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx4_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QIVREx4_PM8_V001" iedType="" lnClass="QIVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx12_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx11_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx5_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx6_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QIVREx5_PM8_V001" iedType="" lnClass="QIVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QPVREx2_PM8_V001" iedType="" lnClass="QPVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="ZOvPwrStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QPVREx3_PM8_V001" iedType="" lnClass="QPVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="ZOvPwrStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QPVREx5_PM8_V001" iedType="" lnClass="QPVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="ZOvPwrStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QPVREx4_PM8_V001" iedType="" lnClass="QPVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="ZOvPwrStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVUBEx1_PM8_V001" iedType="" lnClass="QVUB">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="Str" transient="false" type="SE_Act_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVUBEx2_PM8_V001" iedType="" lnClass="QVUB">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="Str" transient="false" type="SE_Act_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_GGIOEx1_PM8_V001" iedType="" lnClass="GGIO">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="ZMtrDPC1" transient="false" type="SE_ZdoDPC_PM8_V001"/>
+      <DO name="ZMtrDPC2" transient="false" type="SE_ZdoDPC_PM8_V001"/>
+      <DO name="ZMtrInd1" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZMtrInd2" transient="false" type="SE_ZdiIND_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_GGIOEx2_PM8_V001" iedType="" lnClass="GGIO">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="ZMtrDPC1" transient="false" type="SE_ZdoDPC_PM8_V001"/>
+      <DO name="ZMtrDPC2" transient="false" type="SE_ZdoDPC_PM8_V001"/>
+      <DO name="ZMtrInd1" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZMtrInd2" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZMtrInd3" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZMtrInd4" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZMtrInd5" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZMtrInd6" transient="false" type="SE_ZdiIND_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_GGIOEx3_PM8_V001" iedType="" lnClass="GGIO">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="ZMtrDPC1" transient="false" type="SE_ZdoDPC_PM8_V001"/>
+      <DO name="ZMtrDPC2" transient="false" type="SE_ZdoDPC_PM8_V001"/>
+      <DO name="ZMtrInd1" transient="false" type="SE_ZdiIND_PM8_V001"/>
+      <DO name="ZMtrInd2" transient="false" type="SE_ZdiIND_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTAEx2_PM8_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="AvVA" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvVAr" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvW" transient="false" type="SE_Mv_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QPVREx1_PM8_V001" iedType="" lnClass="QPVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="ZLgStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MMTREx3_PM8_V001" iedType="" lnClass="MMTR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="DmdVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="DmdWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="SupVArh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="SupWh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="TotVAh" transient="false" type="SE_Bcr_PM8_V001"/>
+      <DO name="ZRsEnrInt" transient="false" type="SE_SpcEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTAEx6_PM8_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="ZRsMinMax" transient="false" type="SE_SpcEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTAEx1_PM8_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="AvAmps" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvAmps1" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvAmps2" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="AvAmps3" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="AvAmps4" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="AvVA" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvVAr" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="AvW" transient="false" type="SE_Mv_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QIUB_PM8_V001" iedType="" lnClass="QIUB">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="Str" transient="false" type="SE_Act_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSQIEx1_PM8_V001" iedType="" lnClass="MSQI">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="MaxImbA" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="MaxImbPPV" transient="false" type="SE_Mv_PM8_V001"/>
+      <DO name="MaxImbV" transient="false" type="SE_Mv_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTAEx3_PM8_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="MaxAmps" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="MaxAmps4" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="MaxVA" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MaxVAr" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MaxW" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MinAmps" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="MinAmps4" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="MinVA" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MinVAr" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="MinW" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="ZMaxHz" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="ZMaxPF" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="ZMaxPhV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMaxPhV4" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMaxPPV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMinHz" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="ZMinPF" transient="false" type="SE_MvEx_PM8_V001"/>
+      <DO name="ZMinPhV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMinPhV4" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMinPPV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZRsMinMax" transient="false" type="SE_MvEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx14_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx13_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx16_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx15_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx18_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx17_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+      <DO name="SwlStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTAEx5_PM8_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_PM8_V001"/>
+      <DO name="MaxAmps" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="MinAmps" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMaxPhV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMaxPPV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMinPhV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+      <DO name="ZMinPPV" transient="false" type="SE_MvZphsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QIVREx1_PM8_V001" iedType="" lnClass="QIVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_QVVREx19_PM8_V001" iedType="" lnClass="QVVR">
+      <DO name="Mod" transient="false" type="SE_Mod_PM8_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_PM8_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_PM8_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplEx_PM8_V001"/>
+      <DO name="DipStr" transient="false" type="SE_SpsEx_PM8_V001"/>
+    </LNodeType>
+    <DOType cdc="INC" id="SE_Mod_PM8_V001" iedType="">
+      <DA bType="Enum" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" type="Beh" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>status-only</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="INS" id="SE_Beh_PM8_V001" iedType="">
+      <DA bType="Enum" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" type="Beh" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="INS" id="SE_Health_PM8_V001" iedType="">
+      <DA bType="Enum" dchg="true" fc="ST" name="stVal" type="Health">
+        <Val>Ok</Val>
+      </DA>
+      <DA bType="Quality" fc="ST" name="q" qchg="true"/>
+      <DA bType="Timestamp" fc="ST" name="t"/>
+    </DOType>
+    <DOType cdc="LPL" id="SE_Lpl_PM8_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="swRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="d" qchg="false" valKind="RO"/>
+    </DOType>
+    <DOType cdc="LPL" id="SE_LplEx_PM8_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="swRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="d" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="lnNs" qchg="false" valKind="Set">
+        <Val>SE_lnNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="LPL" id="SE_LplLLN0_PM8_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="swRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="d" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="configRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="ldNs" qchg="false" valKind="Set">
+        <Val>IEC 61850-7-4:2003</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DPL" id="SE_Dpl_PM8_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="model" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="location" qchg="false" valKind="RO"/>
+    </DOType>
+    <DOType cdc="ACT" id="SE_Act_PM8_V001" iedType="">
+      <DA bType="BOOLEAN" dchg="true" fc="ST" name="general"/>
+      <DA bType="Quality" fc="ST" name="q" qchg="true"/>
+      <DA bType="Timestamp" fc="ST" name="t"/>
+    </DOType>
+    <DOType cdc="BCR" id="SE_Bcr_PM8_V001" iedType="">
+      <DA bType="INT128" count="0" dchg="true" dupd="false" fc="ST" name="actVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="FLOAT32" count="0" dchg="false" dupd="false" fc="CF" name="pulsQty" qchg="false" valKind="RO">
+        <Val>1.0</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DEL" id="SE_Del_PM8_V001" iedType="">
+      <SDO name="phsAB" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsBC" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsCA" type="SE_Cmv_PM8_V001"/>
+    </DOType>
+    <DOType cdc="DEL" id="SE_DelEx_PM8_V001" iedType="">
+      <SDO name="phsAB" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsBC" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsCA" type="SE_Cmv_PM8_V001"/>
+      <SDO name="zavg" type="SE_CmvEx_PM8_V001"/>
+    </DOType>
+    <DOType cdc="ING" id="SE_IngEx_PM8_V001" iedType="">
+      <DA bType="INT32" count="0" dchg="true" dupd="false" fc="SP" name="setVal" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="INS" id="SE_Ins_PM8_V001" iedType="">
+      <DA bType="INT32" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="INS" id="SE_InsEx_PM8_V001" iedType="">
+      <DA bType="INT32" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="MV" id="SE_Mv_PM8_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="MX" name="mag" qchg="false" type="analogVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="MV" id="SE_MvEx_PM8_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="MX" name="mag" qchg="false" type="analogVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="MV" id="SE_MvZphsEx_PM8_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="MX" name="mag" qchg="false" type="analogVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+      <DA bType="INT32" count="0" dchg="false" dupd="false" fc="MX" name="zPhs" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SE_Spc_PM8_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Oper" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>sbo-with-enhanced-security</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SE_SpcEx_PM8_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Oper" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>direct-with-normal-security</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPS" id="SE_Sps_PM8_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="SPS" id="SE_SpsEx_PM8_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="WYE" id="SE_WyeABC_PM8_V001" iedType="">
+      <SDO name="phsA" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsB" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsC" type="SE_Cmv_PM8_V001"/>
+    </DOType>
+    <DOType cdc="WYE" id="SE_WyeABCag_PM8_V001" iedType="">
+      <SDO name="phsA" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsB" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsC" type="SE_Cmv_PM8_V001"/>
+      <SDO name="zavg" type="SE_CmvEx_PM8_V001"/>
+      <SDO name="zgnd" type="SE_CmvEx_PM8_V001"/>
+    </DOType>
+    <DOType cdc="WYE" id="SE_WyeABCn_PM8_V001" iedType="">
+      <SDO name="phsA" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsB" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsC" type="SE_Cmv_PM8_V001"/>
+      <SDO name="neut" type="SE_Cmv_PM8_V001"/>
+    </DOType>
+    <DOType cdc="WYE" id="SE_WyeABCna_PM8_V001" iedType="">
+      <SDO name="phsA" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsB" type="SE_Cmv_PM8_V001"/>
+      <SDO name="phsC" type="SE_Cmv_PM8_V001"/>
+      <SDO name="neut" type="SE_Cmv_PM8_V001"/>
+      <SDO name="zavg" type="SE_CmvEx_PM8_V001"/>
+    </DOType>
+    <DOType cdc="WYE" id="SE_WyeAngABC_PM8_V001" iedType="">
+      <SDO name="phsA" type="SE_CmvAng_PM8_V001"/>
+      <SDO name="phsB" type="SE_CmvAng_PM8_V001"/>
+      <SDO name="phsC" type="SE_CmvAng_PM8_V001"/>
+    </DOType>
+    <DOType cdc="WYE" id="SE_WyeAngABCn_PM8_V001" iedType="">
+      <SDO name="phsA" type="SE_CmvAng_PM8_V001"/>
+      <SDO name="phsB" type="SE_CmvAng_PM8_V001"/>
+      <SDO name="phsC" type="SE_CmvAng_PM8_V001"/>
+      <SDO name="neut" type="SE_CmvAng_PM8_V001"/>
+    </DOType>
+    <DOType cdc="ZEN" id="SE_Zdiag_PM8_V001" iedType="">
+      <SDO name="enFlkEx" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enHz" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enHV" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enSupVLng" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enMagVVar" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enSupVShrt" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enSum" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enSupVDipEx" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enSupVUBEx" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enSupVVarEx" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enShrtOv" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enTHD" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="enTrsOvVEx" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="almLrnEnd1" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="dskLoWP" type="SE_SpsEx_PM8_V001"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="cdcNs" qchg="false" valKind="Set">
+        <Val>SE_cdcNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="ZDI" id="SE_ZdiIND_PM8_V001" iedType="">
+      <SDO name="zOpCnt" type="SE_InsEx_PM8_V001"/>
+      <DA bType="VisString255" dchg="true" fc="DC" name="zlbl"/>
+      <DA bType="INT32" dchg="true" fc="ST" name="zplsWt"/>
+      <SDO name="zOpTmms" type="SE_InsEx_PM8_V001"/>
+      <SDO name="zInd" type="SE_SpsEx_PM8_V001"/>
+      <SDO name="zIndAlm" type="SE_SpsEx_PM8_V001"/>
+      <DA bType="INT32" dchg="true" fc="ST" name="ztype"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="cdcNs" qchg="false" valKind="Set">
+        <Val>SE_cdcNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="ZDO" id="SE_ZdoDPC_PM8_V001" iedType="">
+      <SDO name="zOpCnt" type="SE_InsEx_PM8_V001"/>
+      <SDO name="zLocKey" type="SE_SpsEx_PM8_V001"/>
+      <DA bType="VisString255" dchg="true" fc="DC" name="zlbl"/>
+      <SDO name="zRemCtlOv" type="SE_SpcEx_PM8_V001"/>
+      <SDO name="zOpTmms" type="SE_InsEx_PM8_V001"/>
+      <SDO name="zPos" type="SE_Dpc_PM8_V001"/>
+      <DA bType="INT32" dchg="true" fc="ST" name="ztype"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="cdcNs" qchg="false" valKind="Set">
+        <Val>SE_cdcNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="CMV" id="SE_Cmv_PM8_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="true" dupd="false" fc="MX" name="cVal" qchg="false" type="cVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="CMV" id="SE_CmvAng_PM8_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="true" dupd="false" fc="MX" name="cVal" qchg="false" type="cValAng" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="CMV" id="SE_CmvEx_PM8_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="true" dupd="false" fc="MX" name="cVal" qchg="false" type="cVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DPC" id="SE_Dpc_PM8_V001" iedType="">
+      <DA bType="Dbpos" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="SBOw" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Cancel" qchg="false" type="cancel" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Oper" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>sbo-with-enhanced-security</Val>
+      </DA>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="sboTimeout" qchg="false" valKind="RO"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="sboClass" qchg="false" type="SboClass" valKind="RO">
+        <Val>operate-once</Val>
+      </DA>
+    </DOType>
+    <DAType id="analogVal" iedType="">
+      <BDA bType="FLOAT32" count="0" name="f" valKind="Set"/>
+    </DAType>
+    <DAType id="cancel" iedType="">
+      <BDA bType="BOOLEAN" count="0" name="ctlVal" valKind="Set"/>
+      <BDA bType="Struct" count="0" name="origin" type="originator" valKind="Set"/>
+      <BDA bType="INT8U" count="0" name="ctlNum" valKind="Set"/>
+      <BDA bType="Timestamp" count="0" name="T" valKind="Set"/>
+      <BDA bType="BOOLEAN" count="0" name="Test" valKind="Set"/>
+    </DAType>
+    <DAType id="cVal" iedType="">
+      <BDA bType="Struct" count="0" name="mag" type="analogVal" valKind="Set"/>
+    </DAType>
+    <DAType id="cValAng" iedType="">
+      <BDA bType="Struct" count="0" name="mag" type="analogVal" valKind="Set"/>
+      <BDA bType="Struct" count="0" name="ang" type="analogVal" valKind="Set"/>
+    </DAType>
+    <DAType id="oper" iedType="">
+      <BDA bType="BOOLEAN" count="0" name="ctlVal" valKind="Set"/>
+      <BDA bType="Struct" count="0" name="origin" type="originator" valKind="Set"/>
+      <BDA bType="INT8U" count="0" name="ctlNum" valKind="Set"/>
+      <BDA bType="Timestamp" count="0" name="T" valKind="Set"/>
+      <BDA bType="BOOLEAN" count="0" name="Test" valKind="Set"/>
+      <BDA bType="Dbpos" count="0" name="Check" valKind="Set"/>
+    </DAType>
+    <DAType id="originator" iedType="">
+      <BDA bType="Enum" count="0" name="orCat" type="OrCategory" valKind="Set"/>
+      <BDA bType="Octet64" count="0" name="orIdent" valKind="Set"/>
+    </DAType>
+    <EnumType id="Beh">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="CtlModel">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="Health">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="OrCategory">
+      <EnumVal ord="0">not-supported</EnumVal>
+      <EnumVal ord="1">bay-control</EnumVal>
+      <EnumVal ord="2">station-control</EnumVal>
+      <EnumVal ord="3">remote-control</EnumVal>
+      <EnumVal ord="4">automatic-bay</EnumVal>
+      <EnumVal ord="5">automatic-station</EnumVal>
+      <EnumVal ord="6">automatic-remote</EnumVal>
+      <EnumVal ord="7">maintenance</EnumVal>
+      <EnumVal ord="8">process</EnumVal>
+    </EnumType>
+    <EnumType id="SboClass">
+      <EnumVal ord="0">operate-once</EnumVal>
+      <EnumVal ord="1">operate-many</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>

@@ -1,0 +1,3 @@
+<?xml version='1.0' encoding='ASCII'?>
+<zAppointements reminder="15">
+        <appointement><begin>1181251680</begin><uid>040000000020000E00</uid><alarmTime>118323212</alarmTime><state></state><location></location><duration>1800</duration><subject>Bring pizza home</subject></appointement></zAppointements>

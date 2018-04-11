@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Private type="SchneiderElectric-SFT-EditTime">2011-05-11 13:13:58</Private>
+  <Private type="SchneiderElectric-SFT-Version">3.1.1</Private>
+  <Header id="ICD File" nameStructure="IEDName" revision="0" toolID="SFT850" version="1"/>
+  <Communication>
+    <SubNetwork name="SN1" type="8-MMS">
+      <ConnectedAP apName="AP1" iedName="TEMPLATE">
+        <Address>
+          <P type="IP" xsi:type="tP_IP">0.0.0.0</P>
+          <P type="IP-SUBNET" xsi:type="tP_IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY" xsi:type="tP_IP-GATEWAY">0.0.0.0</P>
+          <P type="OSI-PSEL" xsi:type="tP_OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL" xsi:type="tP_OSI-SSEL">0001</P>
+          <P type="OSI-TSEL" xsi:type="tP_OSI-TSEL">0001</P>
+        </Address>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED configVersion="1.0" desc="" manufacturer="Schneider Electric" name="TEMPLATE" type="Micrologic">
+    <Services>
+      <DynAssociation/>
+      <SettingGroups/>
+      <GetDirectory/>
+      <GetDataObjectDefinition/>
+      <DataObjectDirectory/>
+      <GetDataSetValue/>
+      <DataSetDirectory/>
+      <ConfDataSet max="32" modify="true"/>
+      <ReadWrite/>
+      <ConfReportControl max="48"/>
+      <GetCBValues/>
+      <ReportSettings bufTime="Dyn" cbName="Conf" datSet="Conf" intgPd="Dyn" optFields="Dyn" rptID="Dyn" trgOps="Dyn"/>
+      <FileHandling/>
+      <ConfLNs fixLnInst="true" fixPrefix="true"/>
+    </Services>
+    <AccessPoint name="AP1">
+      <Server>
+        <Private type="SchneiderElectric-SFT-Timeout">1000</Private>
+        <Private type="SchneiderElectric-SFT-Retries">3</Private>
+        <Authentication none="true"/>
+        <LDevice desc="ELA7.0" inst="ELA7_1_LD1">
+          <Private type="SchneiderElectric-SFT-IcdFileName">SE_Micrologic_ELA7.0-F01_E1V01.icd</Private>
+          <Private type="SchneiderElectric-SFT-IedVersion">0000</Private>
+          <Private type="SchneiderElectric-SFT-IedName">Micrologic</Private>
+          <Private type="SchneiderElectric-SFT-IedFamily">Micrologic</Private>
+          <Private type="SchneiderElectric-SFT-IedAppli">ELA7.0</Private>
+          <Private type="SchneiderElectric-IED-DevModel">ELA:ELA7.0</Private>
+          <Private type="SchneiderElectric-IED-CommType">MODBUS</Private>
+          <Private type="SchneiderElectric-IED-MdbAddr">1</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">22A:22A:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">246:248:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">28A:28A:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">295:297:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">29D:29E:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">2A7:2AA:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">2274:2280:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">2285:228B:M</Private>
+          <LN0 desc="General" inst="" lnClass="LLN0" lnType="SE_LLN0_Micrologic_V001">
+            <DataSet desc="Default status reporting dataset" name="StDs">
+              <FCDA doName="Op" fc="ST" ldInst="ELA7_1_LD1" lnClass="PIOC" lnInst="1" prefix="A5027_"/>
+              <FCDA doName="Op" fc="ST" ldInst="ELA7_1_LD1" lnClass="PTOC" lnInst="1" prefix="A51_"/>
+              <FCDA doName="Op" fc="ST" ldInst="ELA7_1_LD1" lnClass="PTOC" lnInst="2" prefix="A51_"/>
+              <FCDA doName="Op" fc="ST" ldInst="ELA7_1_LD1" lnClass="PTOC" lnInst="1" prefix="A51N_"/>
+              <FCDA doName="Op" fc="ST" ldInst="ELA7_1_LD1" lnClass="PTOC" lnInst="2" prefix="A51N_"/>
+              <FCDA doName="ZTmLos1" fc="ST" ldInst="ELA7_1_LD1" lnClass="LPHD" lnInst="1" prefix=""/>
+              <FCDA doName="Tr" fc="ST" ldInst="ELA7_1_LD1" lnClass="PTRC" lnInst="1" prefix=""/>
+              <FCDA doName="Tr" fc="ST" ldInst="ELA7_1_LD1" lnClass="PTRC" lnInst="2" prefix=""/>
+              <FCDA doName="BlkCls" fc="ST" ldInst="ELA7_1_LD1" lnClass="XCBR" lnInst="1" prefix=""/>
+              <FCDA doName="BlkOpn" fc="ST" ldInst="ELA7_1_LD1" lnClass="XCBR" lnInst="1" prefix=""/>
+              <FCDA doName="Loc" fc="ST" ldInst="ELA7_1_LD1" lnClass="XCBR" lnInst="1" prefix=""/>
+              <FCDA doName="Pos" fc="ST" ldInst="ELA7_1_LD1" lnClass="XCBR" lnInst="1" prefix=""/>
+            </DataSet>
+            <DataSet desc="Default measurands reporting dataset" name="MxDs">
+              <FCDA doName="A" fc="MX" ldInst="ELA7_1_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+            </DataSet>
+            <ReportControl bufTime="100" buffered="true" confRev="1" datSet="StDs" desc="Default Status Report" intgPd="0" name="brcbST" rptID="StRpt">
+              <TrgOps dchg="true" dupd="false" period="true" qchg="true"/>
+              <OptFields bufOvfl="false" configRef="true" dataRef="true" dataSet="true" entryID="true" reasonCode="true" segmentation="false" seqNum="true" timeStamp="true"/>
+              <RptEnabled max="2"/>
+            </ReportControl>
+            <ReportControl bufTime="500" buffered="true" confRev="1" datSet="MxDs" desc="Default Status Report" intgPd="0" name="brcbMX" rptID="MxRpt">
+              <TrgOps dchg="true" dupd="false" period="true" qchg="true"/>
+              <OptFields bufOvfl="false" configRef="true" dataRef="true" dataSet="true" entryID="true" reasonCode="true" segmentation="false" seqNum="true" timeStamp="true"/>
+              <RptEnabled max="2"/>
+            </ReportControl>
+            <DOI name="Mod">
+              <Private type="SchneiderElectric-IED-PntRef">T:IO;L:P:305</Private>
+            </DOI>
+            <DOI name="OpTmh">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;L:P:302</Private>
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:679:u4;L:P:3</Private>
+              </DAI>
+            </DOI>
+          </LN0>
+          <LN desc="" inst="1" lnClass="PIOC" lnType="SE_PIOCEx1_Micrologic_V001" prefix="A5027_">
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:650:4;L:P:28</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="PTOC" lnType="SE_PTOCEx1_Micrologic_V001" prefix="A51_">
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:650:1;L:P:28</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="2" lnClass="PTOC" lnType="SE_PTOCEx1_Micrologic_V001" prefix="A51_">
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:650:2;L:P:28</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="PTOC" lnType="SE_PTOCEx2_Micrologic_V001" prefix="A51N_">
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:650:8;L:P:28</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="2" lnClass="PTOC" lnType="SE_PTOCEx2_Micrologic_V001" prefix="A51N_">
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:650:10;L:P:28</Private>
+            </DOI>
+          </LN>
+          <LN desc="" inst="1" lnClass="CSWI" lnType="SE_CSWI_Micrologic_V001" prefix="">
+            <DOI name="Pos">
+              <Private type="SchneiderElectric-IED-PntRef">T:DS;m:661:1;L:P:27</Private>
+            </DOI>
+          </LN>
+          <LN desc="Physical device" inst="1" lnClass="LPHD" lnType="SE_LPHD_Micrologic_V001" prefix="">
+            <DOI name="PhyNam">
+              <DAI name="model" valKind="Set">
+                <Val>ELA7.0</Val>
+              </DAI>
+              <DAI desc="can be freely used" name="location" valKind="Set">
+                <Val>location</Val>
+              </DAI>
+            </DOI>
+            <DOI name="NumPwrUp2">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;m:554:u1;L:P:33</Private>
+            </DOI>
+            <DOI name="PhyHealth">
+              <Private type="SchneiderElectric-IED-PntRef">T:IO;L:P:303</Private>
+            </DOI>
+            <DOI name="Proxy">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;L:P:304</Private>
+            </DOI>
+            <DOI name="ZRsCBEvt"/>
+            <DOI name="ZRsDateTm"/>
+            <DOI name="ZTmLos1">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:679:8000;L:P:28</Private>
+            </DOI>
+          </LN>
+          <LN desc="Measurements" inst="1" lnClass="MMXU" lnType="SE_MMXU_Micrologic_V001" prefix="">
+            <DOI name="A">
+              <SDI name="neut">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8824:u1;L:P:32</Private>
+                <DAI name="zloadPerc">
+                  <Private type="SchneiderElectric-IED-PntRef">A:F4;m:8840:u1;L:P:32</Private>
+                </DAI>
+              </SDI>
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8821:u1;L:P:32</Private>
+                <DAI name="zloadPerc">
+                  <Private type="SchneiderElectric-IED-PntRef">A:F4;m:8837:u1;L:P:32</Private>
+                </DAI>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8822:u1;L:P:32</Private>
+                <DAI name="zloadPerc">
+                  <Private type="SchneiderElectric-IED-PntRef">A:F4;m:8838:u1;L:P:32</Private>
+                </DAI>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8823:u1;L:P:32</Private>
+                <DAI name="zloadPerc">
+                  <Private type="SchneiderElectric-IED-PntRef">A:F4;m:8839:u1;L:P:32</Private>
+                </DAI>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="zgnd">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8825:u1;L:P:32</Private>
+                <DAI name="zloadPerc">
+                  <Private type="SchneiderElectric-IED-PntRef">A:F4;m:8841:u1;L:P:32</Private>
+                </DAI>
+                <DAI desc="unit: 1A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+              <SDI name="zgnd1">
+                <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8826:u1;N:-3;L:P:32</Private>
+                <DAI name="zloadPerc">
+                  <Private type="SchneiderElectric-IED-PntRef">A:F4;m:8842:u1;N:-2;L:P:32</Private>
+                </DAI>
+                <DAI desc="unit: 0.001A" name="db" valKind="Set">
+                  <Val>1</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+          </LN>
+          <LN desc="Measurements" inst="1" lnClass="MSTA" lnType="SE_MSTAEx1_Micrologic_V001" prefix="PRS_">
+            <DOI name="MaxAmps">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8820:u1;L:P:32</Private>
+            </DOI>
+          </LN>
+          <LN desc="Protection trip conditioning" inst="1" lnClass="PTRC" lnType="SE_PTRC_Micrologic_V001" prefix="">
+            <DOI name="Tr">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:661:2;L:P:26</Private>
+            </DOI>
+          </LN>
+          <LN desc="Protection trip conditioning" inst="2" lnClass="PTRC" lnType="SE_PTRC_Micrologic_V001" prefix="">
+            <DOI name="Tr">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:661:4;L:P:26</Private>
+            </DOI>
+          </LN>
+          <LN desc="Measurements" inst="1" lnClass="MSTA" lnType="SE_MSTAEx2_Micrologic_V001" prefix="SLR_">
+            <DOI name="MaxAmps1">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8827:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="MaxAmps2">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8828:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="MaxAmps3">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8829:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="MaxAmps4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8830:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="MaxAmps5">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8831:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="MaxAmps6">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:8832:u1;N:-3;L:P:32</Private>
+            </DOI>
+            <DOI name="ZRsMinMax"/>
+          </LN>
+          <LN desc="Circuit breaker" inst="1" lnClass="XCBR" lnType="SE_XCBR_Micrologic_V001" prefix="">
+            <DOI name="BlkCls">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:669:0:C;L:P:28</Private>
+            </DOI>
+            <DOI name="BlkOpn">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:669:0:A;L:P:28</Private>
+            </DOI>
+            <DOI name="CBOpCap">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;L:P:302</Private>
+            </DOI>
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;m:669:0:8;m:670:0:1;L:P:226</Private>
+            </DOI>
+            <DOI name="OpCnt">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:663:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="Pos">
+              <Private type="SchneiderElectric-IED-PntRef">T:DS;m:661:1;L:P:27</Private>
+            </DOI>
+            <DOI name="ZOpCntTot">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:662:u1;L:P:32</Private>
+            </DOI>
+            <DOI name="ZRsOpCnt">
+              <DAI name="t">
+                <Private type="SchneiderElectric-IED-PntRef">A:TS;m:582:u3;L:P:3</Private>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="Battery" inst="1" lnClass="ZBAT" lnType="SE_ZBAT_Micrologic_V001" prefix="">
+            <DOI name="EEHealth">
+              <Private type="SchneiderElectric-IED-PntRef">T:EN;m:8843:2:I;m:8843:40:I;L:P:229</Private>
+            </DOI>
+            <DOI name="Vol">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;L:P:302</Private>
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="SE_PIOCEx1_Micrologic_V001" iedType="" lnClass="PIOC">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="Op" transient="false" type="SE_Act_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_PTOCEx1_Micrologic_V001" iedType="" lnClass="PTOC">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="Op" transient="false" type="SE_Act_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_PTOCEx2_Micrologic_V001" iedType="" lnClass="PTOC">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="Op" transient="false" type="SE_Act_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_CSWI_Micrologic_V001" iedType="" lnClass="CSWI">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="Pos" transient="false" type="SE_Dpc_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_LLN0_Micrologic_V001" iedType="" lnClass="LLN0">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplLLN0_Micrologic_V001"/>
+      <DO name="OpTmh" transient="false" type="SE_Ins_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_LPHD_Micrologic_V001" iedType="" lnClass="LPHD">
+      <DO name="PhyNam" transient="false" type="SE_Dpl_Micrologic_V001"/>
+      <DO name="NumPwrUp2" transient="false" type="SE_InsEx_Micrologic_V001"/>
+      <DO name="PhyHealth" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="Proxy" transient="false" type="SE_Sps_Micrologic_V001"/>
+      <DO name="ZRsCBEvt" transient="false" type="SE_SpcEx_Micrologic_V001"/>
+      <DO name="ZRsDateTm" transient="false" type="SE_SpcEx_Micrologic_V001"/>
+      <DO name="ZTmLos1" transient="false" type="SE_SpsEx_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MMXU_Micrologic_V001" iedType="" lnClass="MMXU">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="A" transient="false" type="SE_WyeABCngg1zloadPerc_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTAEx1_Micrologic_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="MaxAmps" transient="false" type="SE_Mv_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_PTRC_Micrologic_V001" iedType="" lnClass="PTRC">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="Tr" transient="false" type="SE_Act_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MSTAEx2_Micrologic_V001" iedType="" lnClass="MSTA">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="MaxAmps1" transient="false" type="SE_MvEx_Micrologic_V001"/>
+      <DO name="MaxAmps2" transient="false" type="SE_MvEx_Micrologic_V001"/>
+      <DO name="MaxAmps3" transient="false" type="SE_MvEx_Micrologic_V001"/>
+      <DO name="MaxAmps4" transient="false" type="SE_MvEx_Micrologic_V001"/>
+      <DO name="MaxAmps5" transient="false" type="SE_MvEx_Micrologic_V001"/>
+      <DO name="MaxAmps6" transient="false" type="SE_MvEx_Micrologic_V001"/>
+      <DO name="ZRsMinMax" transient="false" type="SE_SpcEx_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_XCBR_Micrologic_V001" iedType="" lnClass="XCBR">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="BlkCls" transient="false" type="SE_Spc_Micrologic_V001"/>
+      <DO name="BlkOpn" transient="false" type="SE_Spc_Micrologic_V001"/>
+      <DO name="CBOpCap" transient="false" type="SE_CBOpCap_Micrologic_V001"/>
+      <DO name="Loc" transient="false" type="SE_Sps_Micrologic_V001"/>
+      <DO name="OpCnt" transient="false" type="SE_Ins_Micrologic_V001"/>
+      <DO name="Pos" transient="false" type="SE_Dpc_Micrologic_V001"/>
+      <DO name="ZOpCntTot" transient="false" type="SE_InsEx_Micrologic_V001"/>
+      <DO name="ZRsOpCnt" transient="false" type="SE_SpcEx_Micrologic_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_ZBAT_Micrologic_V001" iedType="" lnClass="ZBAT">
+      <DO name="Mod" transient="false" type="SE_Mod_Micrologic_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Micrologic_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Micrologic_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Micrologic_V001"/>
+      <DO name="EEHealth" transient="false" type="SE_Ins_Micrologic_V001"/>
+      <DO name="Vol" transient="false" type="SE_Mv_Micrologic_V001"/>
+    </LNodeType>
+    <DOType cdc="INC" id="SE_Mod_Micrologic_V001" iedType="">
+      <DA bType="Enum" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" type="Beh" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>status-only</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="INS" id="SE_Beh_Micrologic_V001" iedType="">
+      <DA bType="Enum" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" type="Beh" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="INS" id="SE_Health_Micrologic_V001" iedType="">
+      <DA bType="Enum" dchg="true" fc="ST" name="stVal" type="Health">
+        <Val>Ok</Val>
+      </DA>
+      <DA bType="Quality" fc="ST" name="q" qchg="true"/>
+      <DA bType="Timestamp" fc="ST" name="t"/>
+    </DOType>
+    <DOType cdc="LPL" id="SE_Lpl_Micrologic_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="swRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="d" qchg="false" valKind="RO"/>
+    </DOType>
+    <DOType cdc="LPL" id="SE_LplLLN0_Micrologic_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="swRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="d" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="configRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="ldNs" qchg="false" valKind="Set">
+        <Val>IEC 61850-7-4:2003</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DPL" id="SE_Dpl_Micrologic_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="model" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="location" qchg="false" valKind="RO"/>
+    </DOType>
+    <DOType cdc="ACT" id="SE_Act_Micrologic_V001" iedType="">
+      <DA bType="BOOLEAN" dchg="true" fc="ST" name="general"/>
+      <DA bType="Quality" fc="ST" name="q" qchg="true"/>
+      <DA bType="Timestamp" fc="ST" name="t"/>
+    </DOType>
+    <DOType cdc="ACD" id="SE_CBOpCap_Micrologic_V001" iedType="">
+      <DA bType="Enum" dchg="true" fc="ST" name="stVal" type="CBOpCap">
+        <Val>None</Val>
+      </DA>
+      <DA bType="Quality" fc="ST" name="q" qchg="true"/>
+      <DA bType="Timestamp" fc="ST" name="t"/>
+    </DOType>
+    <DOType cdc="DPC" id="SE_Dpc_Micrologic_V001" iedType="">
+      <DA bType="Dbpos" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="SBOw" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Cancel" qchg="false" type="cancel" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Oper" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>sbo-with-enhanced-security</Val>
+      </DA>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="sboTimeout" qchg="false" valKind="RO"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="sboClass" qchg="false" type="SboClass" valKind="RO">
+        <Val>operate-once</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="INS" id="SE_Ins_Micrologic_V001" iedType="">
+      <DA bType="INT32" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="INS" id="SE_InsEx_Micrologic_V001" iedType="">
+      <DA bType="INT32" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="MV" id="SE_Mv_Micrologic_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="MX" name="mag" qchg="false" type="analogVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="MV" id="SE_MvEx_Micrologic_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="MX" name="mag" qchg="false" type="analogVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SE_Spc_Micrologic_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Oper" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>sbo-with-enhanced-security</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SE_SpcEx_Micrologic_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Oper" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>direct-with-normal-security</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPS" id="SE_Sps_Micrologic_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="SPS" id="SE_SpsEx_Micrologic_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="WYE" id="SE_WyeABCngg1zloadPerc_Micrologic_V001" iedType="">
+      <SDO name="phsA" type="SE_CmvzloadPercEx_Micrologic_V001"/>
+      <SDO name="phsB" type="SE_CmvzloadPercEx_Micrologic_V001"/>
+      <SDO name="phsC" type="SE_CmvzloadPercEx_Micrologic_V001"/>
+      <SDO name="neut" type="SE_CmvzloadPercEx_Micrologic_V001"/>
+      <SDO name="zgnd" type="SE_CmvzloadPercEx_Micrologic_V001"/>
+      <SDO name="zgnd1" type="SE_CmvzloadPercEx_Micrologic_V001"/>
+    </DOType>
+    <DOType cdc="CMV" id="SE_CmvzloadPercEx_Micrologic_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="true" dupd="false" fc="MX" name="cVal" qchg="false" type="cVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="MX" name="zloadPerc" qchg="false" type="analogVal" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DAType id="analogVal" iedType="">
+      <BDA bType="FLOAT32" count="0" name="f" valKind="Set"/>
+    </DAType>
+    <DAType id="cancel" iedType="">
+      <BDA bType="BOOLEAN" count="0" name="ctlVal" valKind="Set"/>
+      <BDA bType="Struct" count="0" name="origin" type="originator" valKind="Set"/>
+      <BDA bType="INT8U" count="0" name="ctlNum" valKind="Set"/>
+      <BDA bType="Timestamp" count="0" name="T" valKind="Set"/>
+      <BDA bType="BOOLEAN" count="0" name="Test" valKind="Set"/>
+    </DAType>
+    <DAType id="cVal" iedType="">
+      <BDA bType="Struct" count="0" name="mag" type="analogVal" valKind="Set"/>
+    </DAType>
+    <DAType id="oper" iedType="">
+      <BDA bType="BOOLEAN" count="0" name="ctlVal" valKind="Set"/>
+      <BDA bType="Struct" count="0" name="origin" type="originator" valKind="Set"/>
+      <BDA bType="INT8U" count="0" name="ctlNum" valKind="Set"/>
+      <BDA bType="Timestamp" count="0" name="T" valKind="Set"/>
+      <BDA bType="BOOLEAN" count="0" name="Test" valKind="Set"/>
+      <BDA bType="Dbpos" count="0" name="Check" valKind="Set"/>
+    </DAType>
+    <DAType id="originator" iedType="">
+      <BDA bType="Enum" count="0" name="orCat" type="OrCategory" valKind="Set"/>
+      <BDA bType="Octet64" count="0" name="orIdent" valKind="Set"/>
+    </DAType>
+    <EnumType id="Beh">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="CBOpCap">
+      <EnumVal ord="1">None</EnumVal>
+      <EnumVal ord="2">Open</EnumVal>
+      <EnumVal ord="3">Close-Open</EnumVal>
+      <EnumVal ord="4">Open-Close-Open</EnumVal>
+      <EnumVal ord="5">Close-Open-Close-Open</EnumVal>
+    </EnumType>
+    <EnumType id="CtlModel">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="Health">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="OrCategory">
+      <EnumVal ord="0">not-supported</EnumVal>
+      <EnumVal ord="1">bay-control</EnumVal>
+      <EnumVal ord="2">station-control</EnumVal>
+      <EnumVal ord="3">remote-control</EnumVal>
+      <EnumVal ord="4">automatic-bay</EnumVal>
+      <EnumVal ord="5">automatic-station</EnumVal>
+      <EnumVal ord="6">automatic-remote</EnumVal>
+      <EnumVal ord="7">maintenance</EnumVal>
+      <EnumVal ord="8">process</EnumVal>
+    </EnumType>
+    <EnumType id="SboClass">
+      <EnumVal ord="0">operate-once</EnumVal>
+      <EnumVal ord="1">operate-many</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>

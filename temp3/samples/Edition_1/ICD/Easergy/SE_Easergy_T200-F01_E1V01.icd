@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Private type="SchneiderElectric-SFT-EditTime">2011-05-11 14:54:53</Private>
+  <Private type="SchneiderElectric-SFT-Version">3.1.1</Private>
+  <Header id="ICD File" nameStructure="IEDName" revision="0" toolID="SFT850" version="1"/>
+  <Communication>
+    <SubNetwork name="SN1" type="8-MMS">
+      <ConnectedAP apName="AP1" iedName="TEMPLATE">
+        <Address>
+          <P type="IP" xsi:type="tP_IP">0.0.0.0</P>
+          <P type="IP-SUBNET" xsi:type="tP_IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY" xsi:type="tP_IP-GATEWAY">0.0.0.0</P>
+          <P type="OSI-PSEL" xsi:type="tP_OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL" xsi:type="tP_OSI-SSEL">0001</P>
+          <P type="OSI-TSEL" xsi:type="tP_OSI-TSEL">0001</P>
+        </Address>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED configVersion="1.0" desc="" manufacturer="Schneider Electric" name="TEMPLATE" type="Easergy">
+    <Services>
+      <DynAssociation/>
+      <SettingGroups/>
+      <GetDirectory/>
+      <GetDataObjectDefinition/>
+      <DataObjectDirectory/>
+      <GetDataSetValue/>
+      <DataSetDirectory/>
+      <ConfDataSet max="32" modify="true"/>
+      <ReadWrite/>
+      <ConfReportControl max="48"/>
+      <GetCBValues/>
+      <ReportSettings bufTime="Dyn" cbName="Conf" datSet="Conf" intgPd="Dyn" optFields="Dyn" rptID="Dyn" trgOps="Dyn"/>
+      <FileHandling/>
+      <ConfLNs fixLnInst="true" fixPrefix="true"/>
+    </Services>
+    <AccessPoint name="AP1">
+      <Server>
+        <Private type="SchneiderElectric-SFT-Timeout">1000</Private>
+        <Private type="SchneiderElectric-SFT-Retries">3</Private>
+        <Authentication none="true"/>
+        <LDevice desc="T200" inst="T200_5_LD1">
+          <Private type="SchneiderElectric-SFT-IcdFileName">SE_Easergy_T200-F01_E1V01.icd</Private>
+          <Private type="SchneiderElectric-SFT-IedVersion">0000</Private>
+          <Private type="SchneiderElectric-SFT-IedName">Easergy</Private>
+          <Private type="SchneiderElectric-SFT-IedFamily">T200</Private>
+          <Private type="SchneiderElectric-SFT-IedAppli">T200</Private>
+          <Private type="SchneiderElectric-IED-DevModel">T200:T200</Private>
+          <Private type="SchneiderElectric-IED-CommType">JBUS</Private>
+          <Private type="SchneiderElectric-IED-MdbAddr">5</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">40:40:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">34:39:S</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">30:30:C</Private>
+          <LN0 desc="General" inst="" lnClass="LLN0" lnType="SE_LLN0_Easergy_V001">
+            <DataSet desc="Default status reporting dataset" name="StDs">
+              <FCDA doName="Loc" fc="ST" ldInst="T200_5_LD1" lnClass="CSWI" lnInst="1" prefix=""/>
+              <FCDA doName="Pos" fc="ST" ldInst="T200_5_LD1" lnClass="CSWI" lnInst="1" prefix=""/>
+              <FCDA doName="Loc" fc="ST" ldInst="T200_5_LD1" lnClass="CSWI" lnInst="2" prefix=""/>
+              <FCDA doName="Pos" fc="ST" ldInst="T200_5_LD1" lnClass="CSWI" lnInst="2" prefix=""/>
+              <FCDA doName="Loc" fc="ST" ldInst="T200_5_LD1" lnClass="XSWI" lnInst="1" prefix="DCNT_"/>
+              <FCDA doName="Pos" fc="ST" ldInst="T200_5_LD1" lnClass="XSWI" lnInst="1" prefix="DCNT_"/>
+              <FCDA doName="Loc" fc="ST" ldInst="T200_5_LD1" lnClass="XSWI" lnInst="2" prefix="DCNT_"/>
+              <FCDA doName="Pos" fc="ST" ldInst="T200_5_LD1" lnClass="XSWI" lnInst="2" prefix="DCNT_"/>
+              <FCDA doName="Ind1" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="1" prefix=""/>
+              <FCDA doName="Ind2" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="1" prefix=""/>
+              <FCDA doName="Ind3" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="1" prefix=""/>
+              <FCDA doName="Ind4" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="1" prefix=""/>
+              <FCDA doName="Ind5" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="1" prefix=""/>
+              <FCDA doName="Ind6" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="1" prefix=""/>
+              <FCDA doName="Loc" fc="ST" ldInst="T200_5_LD1" lnClass="LLN0"/>
+              <FCDA doName="PhyHealth" fc="ST" ldInst="T200_5_LD1" lnClass="LPHD" lnInst="1" prefix=""/>
+              <FCDA doName="PwrDn" fc="ST" ldInst="T200_5_LD1" lnClass="LPHD" lnInst="1" prefix=""/>
+              <FCDA doName="Ind1" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="1" prefix="SFOC_"/>
+              <FCDA doName="Ind2" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="1" prefix="SFOC_"/>
+              <FCDA doName="Ind1" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="2" prefix="SFOC_"/>
+              <FCDA doName="Ind2" fc="ST" ldInst="T200_5_LD1" lnClass="GGIO" lnInst="2" prefix="SFOC_"/>
+            </DataSet>
+            <DataSet desc="Default measurands reporting dataset" name="MxDs">
+              <FCDA doName="ZAvMes" fc="MX" ldInst="T200_5_LD1" lnClass="MMXU" lnInst="1" prefix=""/>
+            </DataSet>
+            <ReportControl bufTime="100" buffered="true" confRev="1" datSet="StDs" desc="Default Status Report" intgPd="0" name="brcbST" rptID="StRpt">
+              <TrgOps dchg="true" dupd="false" period="true" qchg="true"/>
+              <OptFields bufOvfl="false" configRef="true" dataRef="true" dataSet="true" entryID="true" reasonCode="true" segmentation="false" seqNum="true" timeStamp="true"/>
+              <RptEnabled max="2"/>
+            </ReportControl>
+            <ReportControl bufTime="500" buffered="true" confRev="1" datSet="MxDs" desc="Default Status Report" intgPd="0" name="brcbMX" rptID="MxRpt">
+              <TrgOps dchg="true" dupd="false" period="true" qchg="true"/>
+              <OptFields bufOvfl="false" configRef="true" dataRef="true" dataSet="true" entryID="true" reasonCode="true" segmentation="false" seqNum="true" timeStamp="true"/>
+              <RptEnabled max="2"/>
+            </ReportControl>
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:918</Private>
+            </DOI>
+            <DOI name="Mod">
+              <Private type="SchneiderElectric-IED-PntRef">T:IO;L:P:305</Private>
+            </DOI>
+          </LN0>
+          <LN desc="Switch 1 Control" inst="1" lnClass="CSWI" lnType="SE_CSWI_Easergy_V001" prefix="">
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:918</Private>
+            </DOI>
+            <DOI name="Pos">
+              <Private type="SchneiderElectric-IED-PntRef">T:DC;c:769;c:768;s:833;s:832</Private>
+            </DOI>
+          </LN>
+          <LN desc="Switch 1 Control" inst="2" lnClass="CSWI" lnType="SE_CSWI_Easergy_V001" prefix="">
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:918</Private>
+            </DOI>
+            <DOI name="Pos">
+              <Private type="SchneiderElectric-IED-PntRef">T:DC;c:771;c:770;s:835;s:834</Private>
+            </DOI>
+          </LN>
+          <LN desc="Switch 1" inst="1" lnClass="XSWI" lnType="SE_XSWIEx1_Easergy_V001" prefix="DCNT_">
+            <DOI name="BlkCls">
+              <Private type="SchneiderElectric-IED-PntRef">T:SC;L:P:302</Private>
+            </DOI>
+            <DOI name="BlkOpn">
+              <Private type="SchneiderElectric-IED-PntRef">T:SC;L:P:302</Private>
+            </DOI>
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:904</Private>
+            </DOI>
+            <DOI name="LocKey">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;L:P:302</Private>
+            </DOI>
+            <DOI name="OpCnt">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;L:P:302</Private>
+            </DOI>
+            <DOI name="Pos">
+              <Private type="SchneiderElectric-IED-PntRef">T:DO;s:833;s:832</Private>
+            </DOI>
+            <DOI name="SwOpCap">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;L:P:302</Private>
+            </DOI>
+            <DOI name="SwTyp"/>
+          </LN>
+          <LN desc="Switch 2" inst="2" lnClass="XSWI" lnType="SE_XSWIEx1_Easergy_V001" prefix="DCNT_">
+            <DOI name="BlkCls">
+              <Private type="SchneiderElectric-IED-PntRef">T:SC;L:P:302</Private>
+            </DOI>
+            <DOI name="BlkOpn">
+              <Private type="SchneiderElectric-IED-PntRef">T:SC;L:P:302</Private>
+            </DOI>
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:905</Private>
+            </DOI>
+            <DOI name="LocKey">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;L:P:302</Private>
+            </DOI>
+            <DOI name="OpCnt">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;L:P:302</Private>
+            </DOI>
+            <DOI name="Pos">
+              <Private type="SchneiderElectric-IED-PntRef">T:DO;s:835;s:834</Private>
+            </DOI>
+            <DOI name="SwOpCap">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;L:P:302</Private>
+            </DOI>
+            <DOI name="SwTyp"/>
+          </LN>
+          <LN desc="I/O for T200I" inst="1" lnClass="GGIO" lnType="SE_GGIO_Easergy_V001" prefix="">
+            <DOI name="Ind1">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:912</Private>
+            </DOI>
+            <DOI name="Ind2">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:913</Private>
+            </DOI>
+            <DOI name="Ind3">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:920</Private>
+            </DOI>
+            <DOI name="Ind4">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:925</Private>
+            </DOI>
+            <DOI name="Ind5">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:926</Private>
+            </DOI>
+            <DOI name="Ind6">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:927</Private>
+            </DOI>
+          </LN>
+          <LN desc="Device" inst="1" lnClass="LPHD" lnType="SE_LPHD_Easergy_V001" prefix="">
+            <DOI name="PhyNam">
+              <DAI name="model" valKind="Set">
+                <Val>T200</Val>
+              </DAI>
+              <DAI desc="can be freely used" name="location" valKind="Set">
+                <Val>location</Val>
+              </DAI>
+            </DOI>
+            <DOI name="PhyHealth">
+              <Private type="SchneiderElectric-IED-PntRef">T:ES;s:923;L:P:303</Private>
+            </DOI>
+            <DOI name="Proxy">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;L:P:304</Private>
+            </DOI>
+            <DOI name="PwrDn">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:919</Private>
+            </DOI>
+            <DOI name="ZPwrDnDel">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;s:924</Private>
+            </DOI>
+          </LN>
+          <LN desc="Measurements" inst="1" lnClass="MMXU" lnType="SE_MMXU_Easergy_V001" prefix="">
+            <DOI name="ZAvMes">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;m:64:u1;N:-1;L:P:32</Private>
+            </DOI>
+          </LN>
+          <LN desc="Overcurrent Phase Fault Detection for T200I" inst="1" lnClass="GGIO" lnType="SE_GGIOEx1_Easergy_V001" prefix="SFOC_">
+            <DOI name="Ind1">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;s:896</Private>
+            </DOI>
+            <DOI name="Ind2">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;s:897</Private>
+            </DOI>
+          </LN>
+          <LN desc="Overcurrent Phase Fault Detection for T200I" inst="2" lnClass="GGIO" lnType="SE_GGIOEx1_Easergy_V001" prefix="SFOC_">
+            <DOI name="Ind1">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;s:898</Private>
+            </DOI>
+            <DOI name="Ind2">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;s:899</Private>
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="SE_CSWI_Easergy_V001" iedType="" lnClass="CSWI">
+      <DO name="Mod" transient="false" type="SE_Mod_Easergy_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Easergy_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Easergy_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Easergy_V001"/>
+      <DO name="Loc" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="Pos" transient="false" type="SE_Dpc_Easergy_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_XSWIEx1_Easergy_V001" iedType="" lnClass="XSWI">
+      <DO name="Mod" transient="false" type="SE_Mod_Easergy_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Easergy_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Easergy_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Easergy_V001"/>
+      <DO name="BlkCls" transient="false" type="SE_Spc_Easergy_V001"/>
+      <DO name="BlkOpn" transient="false" type="SE_Spc_Easergy_V001"/>
+      <DO name="Loc" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="LocKey" transient="false" type="SE_SpsEx_Easergy_V001"/>
+      <DO name="OpCnt" transient="false" type="SE_Ins_Easergy_V001"/>
+      <DO name="Pos" transient="false" type="SE_PosStOnly_Easergy_V001"/>
+      <DO name="SwOpCap" transient="false" type="SE_Ins_Easergy_V001"/>
+      <DO name="SwTyp" transient="false" type="SE_Ins_Easergy_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_GGIO_Easergy_V001" iedType="" lnClass="GGIO">
+      <DO name="Mod" transient="false" type="SE_Mod_Easergy_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Easergy_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Easergy_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Easergy_V001"/>
+      <DO name="Ind1" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="Ind2" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="Ind3" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="Ind4" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="Ind5" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="Ind6" transient="false" type="SE_Sps_Easergy_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_LLN0_Easergy_V001" iedType="" lnClass="LLN0">
+      <DO name="Mod" transient="false" type="SE_Mod_Easergy_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Easergy_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Easergy_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_LplLLN0_Easergy_V001"/>
+      <DO name="Loc" transient="false" type="SE_Sps_Easergy_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_LPHD_Easergy_V001" iedType="" lnClass="LPHD">
+      <DO name="PhyNam" transient="false" type="SE_Dpl_Easergy_V001"/>
+      <DO name="PhyHealth" transient="false" type="SE_Ins_Easergy_V001"/>
+      <DO name="Proxy" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="PwrDn" transient="false" type="SE_Sps_Easergy_V001"/>
+      <DO name="ZPwrDnDel" transient="false" type="SE_SpsEx_Easergy_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_MMXU_Easergy_V001" iedType="" lnClass="MMXU">
+      <DO name="Mod" transient="false" type="SE_Mod_Easergy_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Easergy_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Easergy_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Easergy_V001"/>
+      <DO name="ZAvMes" transient="false" type="SE_MvEx_Easergy_V001"/>
+    </LNodeType>
+    <LNodeType id="SE_GGIOEx1_Easergy_V001" iedType="" lnClass="GGIO">
+      <DO name="Mod" transient="false" type="SE_Mod_Easergy_V001"/>
+      <DO name="Beh" transient="false" type="SE_Beh_Easergy_V001"/>
+      <DO name="Health" transient="false" type="SE_Health_Easergy_V001"/>
+      <DO name="NamPlt" transient="false" type="SE_Lpl_Easergy_V001"/>
+      <DO name="Ind1" transient="false" type="SE_Act_Easergy_V001"/>
+      <DO name="Ind2" transient="false" type="SE_Act_Easergy_V001"/>
+    </LNodeType>
+    <DOType cdc="INC" id="SE_Mod_Easergy_V001" iedType="">
+      <DA bType="Enum" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" type="Beh" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>status-only</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="INS" id="SE_Beh_Easergy_V001" iedType="">
+      <DA bType="Enum" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" type="Beh" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="INS" id="SE_Health_Easergy_V001" iedType="">
+      <DA bType="Enum" dchg="true" fc="ST" name="stVal" type="Health">
+        <Val>Ok</Val>
+      </DA>
+      <DA bType="Quality" fc="ST" name="q" qchg="true"/>
+      <DA bType="Timestamp" fc="ST" name="t"/>
+    </DOType>
+    <DOType cdc="LPL" id="SE_Lpl_Easergy_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="swRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="d" qchg="false" valKind="RO"/>
+    </DOType>
+    <DOType cdc="LPL" id="SE_LplLLN0_Easergy_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="swRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="d" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="configRev" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="ldNs" qchg="false" valKind="Set">
+        <Val>IEC 61850-7-4:2003</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DPL" id="SE_Dpl_Easergy_V001" iedType="">
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="vendor" qchg="false" valKind="RO">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="model" qchg="false" valKind="RO"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="DC" name="location" qchg="false" valKind="RO"/>
+    </DOType>
+    <DOType cdc="ACT" id="SE_Act_Easergy_V001" iedType="">
+      <DA bType="BOOLEAN" dchg="true" fc="ST" name="general"/>
+      <DA bType="Quality" fc="ST" name="q" qchg="true"/>
+      <DA bType="Timestamp" fc="ST" name="t"/>
+    </DOType>
+    <DOType cdc="DPC" id="SE_Dpc_Easergy_V001" iedType="">
+      <DA bType="Dbpos" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="SBOw" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Cancel" qchg="false" type="cancel" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Oper" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>sbo-with-enhanced-security</Val>
+      </DA>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="sboTimeout" qchg="false" valKind="RO"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="sboClass" qchg="false" type="SboClass" valKind="RO">
+        <Val>operate-once</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="INS" id="SE_Ins_Easergy_V001" iedType="">
+      <DA bType="INT32" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="MV" id="SE_MvEx_Easergy_V001" iedType="">
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="MX" name="mag" qchg="false" type="analogVal" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="MX" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="MX" name="t" qchg="false" valKind="Set"/>
+      <DA bType="INT32U" count="0" dchg="false" dupd="false" fc="CF" name="db" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DPC" id="SE_PosStOnly_Easergy_V001" iedType="">
+      <DA bType="Dbpos" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>status-only</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SE_Spc_Easergy_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="Struct" count="0" dchg="false" dupd="false" fc="CO" name="Oper" qchg="false" type="oper" valKind="Set"/>
+      <DA bType="Enum" count="0" dchg="false" dupd="false" fc="CF" name="ctlModel" qchg="false" type="CtlModel" valKind="RO">
+        <Val>sbo-with-enhanced-security</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPS" id="SE_Sps_Easergy_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+    </DOType>
+    <DOType cdc="SPS" id="SE_SpsEx_Easergy_V001" iedType="">
+      <DA bType="BOOLEAN" count="0" dchg="true" dupd="false" fc="ST" name="stVal" qchg="false" valKind="Set"/>
+      <DA bType="Quality" count="0" dchg="false" dupd="false" fc="ST" name="q" qchg="true" valKind="Set"/>
+      <DA bType="Timestamp" count="0" dchg="false" dupd="false" fc="ST" name="t" qchg="false" valKind="Set"/>
+      <DA bType="VisString255" count="0" dchg="false" dupd="false" fc="EX" name="dataNs" qchg="false" valKind="Set">
+        <Val>SE_dataNs_V0001</Val>
+      </DA>
+    </DOType>
+    <DAType id="analogVal" iedType="">
+      <BDA bType="FLOAT32" count="0" name="f" valKind="Set"/>
+    </DAType>
+    <DAType id="cancel" iedType="">
+      <BDA bType="BOOLEAN" count="0" name="ctlVal" valKind="Set"/>
+      <BDA bType="Struct" count="0" name="origin" type="originator" valKind="Set"/>
+      <BDA bType="INT8U" count="0" name="ctlNum" valKind="Set"/>
+      <BDA bType="Timestamp" count="0" name="T" valKind="Set"/>
+      <BDA bType="BOOLEAN" count="0" name="Test" valKind="Set"/>
+    </DAType>
+    <DAType id="oper" iedType="">
+      <BDA bType="BOOLEAN" count="0" name="ctlVal" valKind="Set"/>
+      <BDA bType="Struct" count="0" name="origin" type="originator" valKind="Set"/>
+      <BDA bType="INT8U" count="0" name="ctlNum" valKind="Set"/>
+      <BDA bType="Timestamp" count="0" name="T" valKind="Set"/>
+      <BDA bType="BOOLEAN" count="0" name="Test" valKind="Set"/>
+      <BDA bType="Dbpos" count="0" name="Check" valKind="Set"/>
+    </DAType>
+    <DAType id="originator" iedType="">
+      <BDA bType="Enum" count="0" name="orCat" type="OrCategory" valKind="Set"/>
+      <BDA bType="Octet64" count="0" name="orIdent" valKind="Set"/>
+    </DAType>
+    <EnumType id="Beh">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="CtlModel">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="Health">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="OrCategory">
+      <EnumVal ord="0">not-supported</EnumVal>
+      <EnumVal ord="1">bay-control</EnumVal>
+      <EnumVal ord="2">station-control</EnumVal>
+      <EnumVal ord="3">remote-control</EnumVal>
+      <EnumVal ord="4">automatic-bay</EnumVal>
+      <EnumVal ord="5">automatic-station</EnumVal>
+      <EnumVal ord="6">automatic-remote</EnumVal>
+      <EnumVal ord="7">maintenance</EnumVal>
+      <EnumVal ord="8">process</EnumVal>
+    </EnumType>
+    <EnumType id="SboClass">
+      <EnumVal ord="0">operate-once</EnumVal>
+      <EnumVal ord="1">operate-many</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>

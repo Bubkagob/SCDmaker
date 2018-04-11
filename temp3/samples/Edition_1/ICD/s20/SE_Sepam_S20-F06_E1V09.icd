@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd">
+  <Header id="Sepam S20 definition file" nameStructure="IEDName" version="6" revision="9">
+    <History>
+      <Hitem version="6" revision="6" what="Sepam standard ICD file" when="2010-04-26" who="Sepam ICD library"/>
+      <Hitem version="6" revision="7" what="Sepam standard ICD file" when="2012-05-21" who="Sepam ICD library"/>
+      <Hitem version="6" revision="8" what="Sepam standard ICD file" when="2012-07-29" who="Sepam ICD library"/>
+      <Hitem version="6" revision="9" what="Sepam standard ICD file" when="2013-02-07" who="Sepam ICD library"/>
+    </History>
+  </Header>
+  <Communication>
+    <SubNetwork name="SN1" type="8-MMS">
+      <ConnectedAP iedName="TEMPLATE" apName="AP1">
+        <Address>
+          <P type="IP" xsi:type="tP_IP">0.0.0.0</P>
+          <P type="IP-SUBNET" xsi:type="tP_IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY" xsi:type="tP_IP-GATEWAY">0.0.0.0</P>
+          <P type="OSI-PSEL" xsi:type="tP_OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL" xsi:type="tP_OSI-SSEL">0001</P>
+          <P type="OSI-TSEL" xsi:type="tP_OSI-TSEL">0001</P>
+        </Address>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED name="TEMPLATE" type="Sepam S20" manufacturer="Schneider Electric" configVersion="6.0" desc="Substation">
+    <Services>
+      <DynAssociation/>
+      <SettingGroups/>
+      <GetDirectory/>
+      <GetDataObjectDefinition/>
+      <DataObjectDirectory/>
+      <GetDataSetValue/>
+      <DataSetDirectory/>
+      <ConfDataSet max="32" maxAttributes="600" modify="true"/>
+      <ReadWrite/>
+      <ConfReportControl max="16"/>
+      <GetCBValues/>
+      <ReportSettings rptID="Dyn" optFields="Dyn" bufTime="Dyn" trgOps="Dyn" intgPd="Dyn" cbName="Conf" datSet="Conf"/>
+      <ConfLNs fixPrefix="true" fixLnInst="true"/>
+      <FileHandling/>
+    </Services>
+    <AccessPoint name="AP1">
+      <Server>
+        <Private type="SchneiderElectric-SFT-Timeout">1000</Private>
+        <Private type="SchneiderElectric-SFT-Retries">3</Private>
+        <Authentication none="true"/>
+        <LDevice inst="LD0">
+          <!-- ==========================================================================
+            DEVICE CHARACTERISTICS
+          =========================================================================== -->
+          <Private type="SchneiderElectric-SFT-IcdFileName">s20/SE_Sepam_S20-F06_E1V09.icd</Private>
+          <Private type="SchneiderElectric-SFT-IedVersion">940</Private>
+          <Private type="SchneiderElectric-SFT-IedName">Sepam</Private>
+          <Private type="SchneiderElectric-SFT-IedFamily">series 20</Private>
+          <Private type="SchneiderElectric-SFT-IedAppli">S20</Private>
+          <Private type="SchneiderElectric-IED-DevModel">20:S20</Private>
+          <Private type="SchneiderElectric-IED-MdbAddr">1</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">3110:3137:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">3140:3159:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">3160:3175:M</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">100:105:S</Private>
+          <Private type="SchneiderElectric-IED-MdbTbl">1F0:1F0:C</Private>
+          <!-- ==========================================================================
+            SYSTEM LOGICAL NODES
+          =========================================================================== -->
+          <LN0 inst="" lnClass="LLN0" lnType="SE_LLN0_Sepam20_V003" desc="General">
+            <DataSet name="StDs" desc="Default Status Dataset">
+              <!-- ==================================================================
+                INFOS (PROTECTION)
+                Numerical order
+              =================================================================== -->
+              <FCDA ldInst="LD0" prefix="A46_" lnClass="PTOC" lnInst="1" doName="Op" fc="ST"/>
+              <FCDA ldInst="LD0" prefix="A51_" lnClass="PTOC" lnInst="1" doName="Op" fc="ST"/>
+              <FCDA ldInst="LD0" prefix="A51_" lnClass="PTOC" lnInst="2" doName="Op" fc="ST"/>
+              <FCDA ldInst="LD0" prefix="A51_" lnClass="PTOC" lnInst="3" doName="Op" fc="ST"/>
+              <FCDA ldInst="LD0" prefix="A51_" lnClass="PTOC" lnInst="4" doName="Op" fc="ST"/>
+              <FCDA ldInst="LD0" prefix="A51N_" lnClass="PTOC" lnInst="1" doName="Op" fc="ST"/>
+              <FCDA ldInst="LD0" prefix="A51N_" lnClass="PTOC" lnInst="2" doName="Op" fc="ST"/>
+              <FCDA ldInst="LD0" prefix="A51N_" lnClass="PTOC" lnInst="3" doName="Op" fc="ST"/>
+              <FCDA ldInst="LD0" prefix="A51N_" lnClass="PTOC" lnInst="4" doName="Op" fc="ST"/>
+              <!-- ==================================================================
+                INFOS (NON PROTECTION)
+                Alphabetical order of lnClass
+              =================================================================== -->
+              <FCDA ldInst="LD0" lnClass="LLN0" doName="Loc" fc="ST"/>
+              <FCDA ldInst="LD0" lnClass="LLN0" doName="Mod" fc="ST"/>
+              <FCDA ldInst="LD0" lnClass="LPHD" lnInst="1" doName="PhyHealth" fc="ST"/>
+              <FCDA ldInst="LD0" lnClass="PTRC" lnInst="1" doName="Tr" fc="ST"/>
+              <FCDA ldInst="LD0" lnClass="RREC" lnInst="1" doName="AutoRecSt" fc="ST"/>
+              <FCDA ldInst="LD0" lnClass="XCBR" lnInst="1" doName="EEHealth" fc="ST"/>
+              <FCDA ldInst="LD0" lnClass="XCBR" lnInst="1" doName="Pos" fc="ST"/>
+            </DataSet>
+            <DataSet name="MxDs" desc="Default Measurands Dataset">
+              <FCDA ldInst="LD0" lnClass="MMXU" lnInst="2" doName="A" fc="MX"/>
+            </DataSet>
+            <ReportControl name="brcbST" datSet="StDs" confRev="1" bufTime="100" buffered="true" desc="Default Status Report" rptID="brcbST">
+              <TrgOps dchg="true" qchg="true" period="true"/>
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true" entryID="true" bufOvfl="true"/>
+			  <RptEnabled max="2"/>
+            </ReportControl>
+            <ReportControl name="brcbMX" datSet="MxDs" confRev="1" bufTime="500" buffered="true" desc="Default Measurands Report" rptID="brcbMX">
+              <TrgOps dchg="true" qchg="true" period="true"/>
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true" entryID="true" bufOvfl="true"/>
+			  <RptEnabled max="2"/>
+            </ReportControl>
+            <!--
+              LLN0 ATTRIBUTES
+            -->
+            <DOI name="Mod">
+              <Private type="SchneiderElectric-IED-PntRef">T:IO;P:7</Private>
+            </DOI>
+            <DOI name="NamPlt">
+              <DAI name="configRev"/>
+            </DOI>
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1037</Private>
+            </DOI>
+            <DOI name="LEDRs">
+              <Private type="SchneiderElectric-IED-PntRef">T:SC;C:1F04;S:1038:I</Private>
+            </DOI>
+            <DOI name="ComWac">
+              <Private type="SchneiderElectric-IED-PntRef">T:SC;C:1F0E;C:1F0F;S:100B</Private>
+            </DOI>
+            <DOI name="ActSGA">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1007</Private>
+            </DOI>
+            <DOI name="ActSGB">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1006</Private>
+            </DOI>
+            <!--
+              SettingControl
+            -->
+            <SettingControl numOfSGs="2">
+              <Private type="SchneiderElectric-IED-SG">T:SG;C:1F02;C:1F03;S:1007;S:1006</Private>
+            </SettingControl>
+          </LN0>
+          <LN inst="1" prefix="" lnClass="LPHD" lnType="LPHD_Sepam2040" desc="Device">
+            <!--
+            LPHD1 ATTRIBUTES
+          -->
+            <DOI name="PhyNam">
+              <DAI name="model">
+                <Val>Sepam S20</Val>
+              </DAI>
+              <DAI name="location" desc="can be freely used">
+                <Val/>
+              </DAI>
+            </DOI>
+            <DOI name="PhyHealth">
+              <Private type="SchneiderElectric-IED-PntRef">T:ES;S:1008;S:1009;P:5</Private>
+            </DOI>
+            <DOI name="Proxy">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;P:6</Private>
+            </DOI>
+          </LN>
+          <!-- ==========================================================================
+            LOGICAL NODES ATTRIBUTES (NON PROTECTION)
+            Alphabetical order of lnClass
+          =========================================================================== -->
+          <LN inst="1" prefix="" lnClass="CSWI" lnType="CSWI_Sepam204080" desc="Remote breaker control">
+            <!--
+            CSWI1 ATTRIBUTES
+          -->
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1037</Private>
+            </DOI>
+            <DOI name="Pos">
+              <Private type="SchneiderElectric-IED-PntRef">T:DC;C:1F01;C:1F00;S:1051;S:1050</Private>
+              <DAI name="sboTimeout">
+                <Val>300000</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN inst="1" prefix="M114_" lnClass="GGIO" lnType="MES_GGIO_Sepam2040" desc="MES114">
+            <!--
+            M114_GGIO1 ATTRIBUTES
+          -->
+            <DOI name="Ind11" desc="I11">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1050</Private>
+            </DOI>
+            <DOI name="Ind12" desc="I12">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1051</Private>
+            </DOI>
+            <DOI name="Ind13" desc="I13">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1052</Private>
+            </DOI>
+            <DOI name="Ind14" desc="I14">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1053</Private>
+            </DOI>
+            <DOI name="Ind21" desc="I21">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1054</Private>
+            </DOI>
+            <DOI name="Ind22" desc="I22">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1055</Private>
+            </DOI>
+            <DOI name="Ind23" desc="I23">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1056</Private>
+            </DOI>
+            <DOI name="Ind24" desc="I24">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1057</Private>
+            </DOI>
+            <DOI name="Ind25" desc="I25">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1058</Private>
+            </DOI>
+            <DOI name="Ind26" desc="I26">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1059</Private>
+            </DOI>
+          </LN>
+          <LN inst="2" prefix="" lnClass="MMXU" lnType="I_MMXU_Sepam20" desc="Measurements">
+            <!--
+            MMXU2 ATTRIBUTES
+          -->
+            <DOI name="A">
+              <SDI name="phsA">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;M:3110:32U:0.1</Private>
+                <DAI name="db" desc="unit: 0.1A">
+                  <Val>50</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;M:3112:32U:0.1</Private>
+                <DAI name="db" desc="unit: 0.1A">
+                  <Val>50</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;M:3114:32U:0.1</Private>
+                <DAI name="db" desc="unit: 0.1A">
+                  <Val>50</Val>
+                </DAI>
+              </SDI>
+              <SDI name="neut">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;M:3116:32U:0.1</Private>
+                <DAI name="db" desc="unit: 0.1A">
+                  <Val>20</Val>
+                </DAI>
+              </SDI>
+              <SDI name="res">
+                <Private type="SchneiderElectric-IED-PntRef">T:CM;M:3116:32U:0.1</Private>
+                <DAI name="db" desc="unit: 0.1A">
+                  <Val>20</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+          </LN>
+          <LN inst="1" prefix="" lnClass="MSTA" lnType="MSTA_Sepam20" desc="Meetering statistics">
+            <!--
+            MSTA1 ATTRIBUTES
+          -->
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1037</Private>
+            </DOI>
+            <DOI name="AvAmps1">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:311E:32U:0.1</Private>
+              <DAI name="db" desc="unit: 0.1A">
+                <Val>50</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AvAmps2">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:3120:32U:0.1</Private>
+              <DAI name="db" desc="unit: 0.1A">
+                <Val>50</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AvAmps3">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:3122:32U:0.1</Private>
+              <DAI name="db" desc="unit: 0.1A">
+                <Val>50</Val>
+              </DAI>
+            </DOI>
+            <DOI name="MaxAmps1">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:3118:32U:0.1</Private>
+              <DAI name="db" desc="unit: 0.1A">
+                <Val>50</Val>
+              </DAI>
+            </DOI>
+            <DOI name="MaxAmps2">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:311A:32U:0.1</Private>
+              <DAI name="db" desc="unit: 0.1A">
+                <Val>50</Val>
+              </DAI>
+            </DOI>
+            <DOI name="MaxAmps3">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:311C:32U:0.1</Private>
+              <DAI name="db" desc="unit: 0.1A">
+                <Val>50</Val>
+              </DAI>
+            </DOI>
+            <DOI name="TrAmp1">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:3140:32U</Private>
+            </DOI>
+            <DOI name="TrAmp2">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:3142:32U</Private>
+            </DOI>
+            <DOI name="TrAmp3">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:3144:32U</Private>
+            </DOI>
+            <DOI name="TrAmp4">
+              <Private type="SchneiderElectric-IED-PntRef">T:MV;M:3146:32U</Private>
+            </DOI>
+            <DOI name="RsMax">
+              <Private type="SchneiderElectric-IED-PntRef">T:SN;C:1F05</Private>
+            </DOI>
+          </LN>
+          <LN inst="1" prefix="" lnClass="RDRE" lnType="RDRE_Sepam204080" desc="Disturbance recorder">
+            <!--
+            RDRE1 ATTRIBUTES
+          -->
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1037</Private>
+            </DOI>
+            <DOI name="RcdTrg">
+              <Private type="SchneiderElectric-IED-PntRef">T:SN;C:1F09</Private>
+            </DOI>
+            <DOI name="RcdInh">
+              <Private type="SchneiderElectric-IED-PntRef">T:SC;C:1F07;C:1F08;S:103D</Private>
+            </DOI>
+            <DOI name="RcdMade">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:103B</Private>
+            </DOI>
+            <DOI name="FltNum">
+              <DAI name="stVal">
+                <Val>0</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN inst="1" prefix="" lnClass="RREC" lnType="RREC_Sepam204080" desc="Recloser">
+            <!--
+            RREC1 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:1701;N:17;A:1</Private>
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1037</Private>
+            </DOI>
+            <DOI name="BlkRec">
+              <Private type="SchneiderElectric-IED-PntRef">T:SC;C:1F0B;C:1F0A;S:1031:I</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;P:4</Private>
+            </DOI>
+            <DOI name="AutoRecSt">
+              <Private type="SchneiderElectric-IED-PntRef">T:ES;S:1032;S:1034;P:2</Private>
+            </DOI>
+          </LN>
+          <LN inst="1" prefix="" lnClass="XCBR" lnType="XCBR_Sepam2040" desc="Circuit Breaker">
+            <!--
+            XCBR1 ATTRIBUTES
+          -->
+            <DOI name="Loc">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1037</Private>
+            </DOI>
+            <DOI name="EEHealth">
+              <Private type="SchneiderElectric-IED-PntRef">T:ES;S:103A;P:3</Private>
+            </DOI>
+            <DOI name="OpCnt">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;M:3170:32U</Private>
+            </DOI>
+            <DOI name="Pos">
+              <Private type="SchneiderElectric-IED-PntRef">T:DO;S:1051;S:1050</Private>
+            </DOI>
+            <DOI name="BlkOpn">
+              <Private type="SchneiderElectric-IED-PntRef">T:SO;P:4</Private>
+            </DOI>
+            <DOI name="BlkCls">
+              <Private type="SchneiderElectric-IED-PntRef">T:SO;P:4</Private>
+            </DOI>
+            <DOI name="SumSwARs">
+              <Private type="SchneiderElectric-IED-PntRef">T:BC;M:316C:32U</Private>
+            </DOI>
+            <DOI name="OpHrsCnt">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;M:314A:32U</Private>
+            </DOI>
+            <DOI name="OpTmms">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;M:3172:32U</Private>
+            </DOI>
+            <DOI name="ChaTms">
+              <Private type="SchneiderElectric-IED-PntRef">T:IS;M:3174:32U</Private>
+            </DOI>
+          </LN>
+          <!-- ==========================================================================
+            LOGICAL NODES ATTRIBUTES (PROTECTION)
+            Numerical order
+          =========================================================================== -->
+          <LN inst="1" prefix="A46_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Unbalance">
+            <!--
+            46_PTOC1 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0301;N:4;A:1</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:101B</Private>
+            </DOI>
+          </LN>
+          <LN inst="1" prefix="A51_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Phase overcurrent #1">
+            <!--
+            51_PTOC1 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0101;N:16;A:9</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1010</Private>
+            </DOI>
+          </LN>
+          <LN inst="2" prefix="A51_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Phase overcurrent #2">
+            <!--
+            51_PTOC2 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0102;N:16;A:9</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1011</Private>
+            </DOI>
+          </LN>
+          <LN inst="3" prefix="A51_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Phase overcurrent #3">
+            <!--
+            51_PTOC3 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0101;N:16;A:9</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1012</Private>
+            </DOI>
+          </LN>
+          <LN inst="4" prefix="A51_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Phase overcurrent #4">
+            <!--
+            51_PTOC4 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0102;N:16;A:9</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1013</Private>
+            </DOI>
+          </LN>
+          <LN inst="1" prefix="A51N_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Earth fault #1">
+            <!--
+            51N_PTOC1 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0201;N:16;A:9</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1014</Private>
+            </DOI>
+          </LN>
+          <LN inst="2" prefix="A51N_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Earth fault #2">
+            <!--
+            51N_PTOC2 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0202;N:16;A:9</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1015</Private>
+            </DOI>
+          </LN>
+          <LN inst="3" prefix="A51N_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Earth fault #3">
+            <!--
+            51N_PTOC3 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0201;N:16;A:9</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1016</Private>
+            </DOI>
+          </LN>
+          <LN inst="4" prefix="A51N_" lnClass="PTOC" lnType="PTOC_Sepam204080" desc="Earth fault #4">
+            <!--
+            51N_PTOC4 ATTRIBUTES
+          -->
+            <Private type="SchneiderElectric-IED-FunRef">F:0202;N:16;A:9</Private>
+            <DOI name="Str">
+              <Private type="SchneiderElectric-IED-PntRef">T:AD;P:4</Private>
+            </DOI>
+            <DOI name="Op">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1017</Private>
+            </DOI>
+          </LN>
+          <LN inst="1" prefix="" lnClass="PTRC" lnType="PTRC_Sepam20" desc="Protection trip conditioning">
+            <!--
+            PTRC1 ATTRIBUTES
+          -->
+            <DOI name="Tr">
+              <Private type="SchneiderElectric-IED-PntRef">T:AT;S:1004</Private>
+            </DOI>
+            <DOI name="BlkInd1">
+              <Private type="SchneiderElectric-IED-PntRef">T:SS;S:1035</Private>
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <!-- ======================================================================================
+      LOGICAL NODES (NON PROTECTION)
+      Alphabetical order of lnClass
+    ======================================================================================= -->
+    <!--
+      C group: Logical nodes for control (in alphabetical order of lnClass)
+    -->
+    <LNodeType id="CSWI_Sepam204080" lnClass="CSWI" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="Loc" type="Sps_Sepam204080"/>
+      <DO name="Pos" type="Pos_Sepam204080_V002"/>
+    </LNodeType>
+    <!--
+      G group: Logical nodes for generic reference (in alphabetical order of lnClass)
+    -->
+    <LNodeType id="MES_GGIO_Sepam2040" lnClass="GGIO" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="Ind11" type="Sps_Sepam204080"/>
+      <DO name="Ind12" type="Sps_Sepam204080"/>
+      <DO name="Ind13" type="Sps_Sepam204080"/>
+      <DO name="Ind14" type="Sps_Sepam204080"/>
+      <DO name="Ind21" type="Sps_Sepam204080"/>
+      <DO name="Ind22" type="Sps_Sepam204080"/>
+      <DO name="Ind23" type="Sps_Sepam204080"/>
+      <DO name="Ind24" type="Sps_Sepam204080"/>
+      <DO name="Ind25" type="Sps_Sepam204080"/>
+      <DO name="Ind26" type="Sps_Sepam204080"/>
+    </LNodeType>
+    <!--
+      L group: System logical nodes (in alphabetical order of lnClass)
+    -->
+    <LNodeType id="SE_LLN0_Sepam20_V003" lnClass="LLN0" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="LplLLN0_Sepam204080"/>
+      <DO name="Loc" type="Sps_Sepam204080"/>
+      <DO name="LEDRs" type="Spc_Sepam204080"/>
+      <DO name="ComWac" type="SpcEx_Sepam204080"/>
+      <DO name="ActSGA" type="SpsEx_Sepam204080"/>
+      <DO name="ActSGB" type="SpsEx_Sepam204080"/>
+    </LNodeType>
+    <LNodeType id="LPHD_Sepam2040" lnClass="LPHD" iedType="">
+      <DO name="PhyNam" type="Dpl_Sepam204080"/>
+      <DO name="PhyHealth" type="Health_Sepam204080"/>
+      <DO name="Proxy" type="Sps_Sepam204080"/>
+    </LNodeType>
+    <!--
+      M group: Logical nodes for metering and measurement (in alphabetical order of lnClass)
+    -->
+    <LNodeType id="I_MMXU_Sepam20" lnClass="MMXU" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="A" type="WyeABCnr_Sepam204080"/>
+    </LNodeType>
+    <LNodeType id="MSTA_Sepam20" lnClass="MSTA" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="Loc" type="Sps_Sepam204080"/>
+      <DO name="AvAmps1" type="Mv_Sepam204080"/>
+      <DO name="AvAmps2" type="Mv_Sepam204080"/>
+      <DO name="AvAmps3" type="Mv_Sepam204080"/>
+      <DO name="MaxAmps1" type="Mv_Sepam204080"/>
+      <DO name="MaxAmps2" type="Mv_Sepam204080"/>
+      <DO name="MaxAmps3" type="Mv_Sepam204080"/>
+      <DO name="TrAmp1" type="MvEx_Sepam204080"/>
+      <DO name="TrAmp2" type="MvEx_Sepam204080"/>
+      <DO name="TrAmp3" type="MvEx_Sepam204080"/>
+      <DO name="TrAmp4" type="MvEx_Sepam204080"/>
+      <DO name="RsMax" type="SpcCoOnlyEx_Sepam204080"/>
+    </LNodeType>
+    <!--
+      R group: Logical nodes for protection related functions (in alphabetical order of lnClass)
+    -->
+    <LNodeType id="RDRE_Sepam204080" lnClass="RDRE" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="Loc" type="Sps_Sepam204080"/>
+      <DO name="RcdTrg" type="SpcCoOnly_Sepam204080"/>
+      <DO name="RcdInh" type="SpcEx_Sepam204080"/>
+      <DO name="RcdMade" type="Sps_Sepam204080"/>
+      <DO name="FltNum" type="Ins_Sepam204080"/>
+    </LNodeType>
+    <LNodeType id="RREC_Sepam204080" lnClass="RREC" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="Loc" type="Sps_Sepam204080"/>
+      <DO name="BlkRec" type="Spc_Sepam204080"/>
+      <DO name="Op" type="Act_Sepam204080"/>
+      <DO name="AutoRecSt" type="AutoRecSt_Sepam204080"/>
+    </LNodeType>
+    <!--
+      X group: Logical nodes for switchgear (in alphabetical order of lnClass)
+    -->
+    <LNodeType id="XCBR_Sepam2040" lnClass="XCBR" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="Loc" type="Sps_Sepam204080"/>
+      <DO name="EEHealth" type="Health_Sepam204080"/>
+      <DO name="OpCnt" type="Ins_Sepam204080"/>
+      <DO name="Pos" type="PosStOnly_Sepam204080"/>
+      <DO name="BlkOpn" type="SpcStOnly_Sepam204080"/>
+      <DO name="BlkCls" type="SpcStOnly_Sepam204080"/>
+      <DO name="SumSwARs" type="Bcr_Sepam204080"/>
+      <DO name="CBOpCap" type="CBOpCap_Sepam204080"/>
+      <DO name="OpHrsCnt" type="InsEx_Sepam204080"/>
+      <DO name="OpTmms" type="InsEx_Sepam204080"/>
+      <DO name="ChaTms" type="InsEx_Sepam204080"/>
+    </LNodeType>
+    <!-- ======================================================================================
+      LOGICAL NODES (PROTECTION)
+      Alphabetical order of lnClass
+    ======================================================================================= -->
+    <!--
+      P group: Logical nodes for protection functions (in alphabetical order of lnClass)
+    -->
+    <LNodeType id="PTOC_Sepam204080" lnClass="PTOC" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="Str" type="Acd_Sepam204080"/>
+      <DO name="Op" type="Act_Sepam204080"/>
+    </LNodeType>
+    <LNodeType id="PTRC_Sepam20" lnClass="PTRC" iedType="">
+      <DO name="Mod" type="Mod_Sepam204080"/>
+      <DO name="Beh" type="Beh_Sepam204080"/>
+      <DO name="Health" type="Health_Sepam204080"/>
+      <DO name="NamPlt" type="Lpl_Sepam204080"/>
+      <DO name="Tr" type="Act_Sepam204080"/>
+      <DO name="BlkInd1" type="SpsEx_Sepam204080"/>
+    </LNodeType>
+    <!-- ======================================================================================
+      DATA OBJECTS
+    ======================================================================================= -->
+    <DOType cdc="SPS" id="Sps_Sepam204080">
+      <DA fc="ST" name="stVal" bType="BOOLEAN" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+    </DOType>
+    <DOType cdc="SPS" id="SpsEx_Sepam204080">
+      <DA fc="ST" name="stVal" bType="BOOLEAN" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="EX" name="dataNs" bType="VisString255">
+        <Val>Sepam series 20/40/60/80</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="INS" id="Beh_Sepam204080">
+      <DA fc="ST" name="stVal" bType="Enum" dchg="true" type="Beh">
+        <Val>off</Val>
+      </DA>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+    </DOType>
+    <DOType cdc="INS" id="Health_Sepam204080">
+      <DA fc="ST" name="stVal" bType="Enum" dchg="true" type="Health">
+        <Val>Ok</Val>
+      </DA>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+    </DOType>
+    <DOType cdc="INS" id="AutoRecSt_Sepam204080">
+      <DA fc="ST" name="stVal" bType="Enum" dchg="true" type="AutoRecSt">
+        <Val>Successful</Val>
+      </DA>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+    </DOType>
+    <DOType cdc="INS" id="CBOpCap_Sepam204080">
+      <DA fc="ST" name="stVal" bType="Enum" dchg="true" type="CBOpCap">
+        <Val>None</Val>
+      </DA>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+    </DOType>
+    <DOType cdc="INS" id="Ins_Sepam204080">
+      <DA fc="ST" name="stVal" bType="INT32" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+    </DOType>
+    <DOType cdc="INS" id="InsEx_Sepam204080">
+      <DA fc="ST" name="stVal" bType="INT32" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="EX" name="dataNs" bType="VisString255">
+        <Val>Sepam series 20/40/60/80</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="ACT" id="Act_Sepam204080">
+      <DA fc="ST" name="general" bType="BOOLEAN" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+    </DOType>
+    <DOType cdc="ACD" id="Acd_Sepam204080">
+      <DA fc="ST" name="general" bType="BOOLEAN" dchg="true"/>
+      <DA fc="ST" name="dirGeneral" bType="Enum" dchg="true" type="dir">
+        <Val>unknown</Val>
+      </DA>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+    </DOType>
+    <DOType cdc="BCR" id="Bcr_Sepam204080">
+      <DA fc="ST" name="actVal" bType="INT128" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="CF" name="pulsQty" valKind="RO" bType="FLOAT32">
+        <Val>1.0</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="MV" id="Mv_Sepam204080">
+      <DA fc="MX" name="mag" bType="Struct" type="analogValSepam"/>
+      <DA fc="MX" name="q" bType="Quality" qchg="true"/>
+      <DA fc="MX" name="t" bType="Timestamp"/>
+      <DA fc="CF" name="db" valKind="RO" bType="INT32U"/>
+    </DOType>
+    <DOType cdc="MV" id="MvEx_Sepam204080">
+      <DA fc="MX" name="mag" bType="Struct" type="analogValSepam"/>
+      <DA fc="MX" name="q" bType="Quality" qchg="true"/>
+      <DA fc="MX" name="t" bType="Timestamp"/>
+      <DA fc="CF" name="db" valKind="RO" bType="INT32U"/>
+      <DA fc="EX" name="dataNs" bType="VisString255">
+        <Val>Sepam series 20/40/60/80</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="CMV" id="Cmv_Sepam204080">
+      <DA fc="MX" name="cVal" bType="Struct" type="cValSepam" dchg="true"/>
+      <DA fc="MX" name="q" bType="Quality" qchg="true"/>
+      <DA fc="MX" name="t" bType="Timestamp"/>
+      <DA fc="CF" name="db" valKind="RO" bType="INT32U"/>
+    </DOType>
+    <DOType cdc="WYE" id="WyeABCnr_Sepam204080">
+      <SDO name="phsA" type="Cmv_Sepam204080"/>
+      <SDO name="phsB" type="Cmv_Sepam204080"/>
+      <SDO name="phsC" type="Cmv_Sepam204080"/>
+      <SDO name="neut" type="Cmv_Sepam204080"/>
+      <SDO name="res" type="Cmv_Sepam204080"/>
+    </DOType>
+    <DOType cdc="SPC" id="Spc_Sepam204080">
+      <DA fc="ST" name="stVal" bType="BOOLEAN" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="CO" name="Oper" bType="Struct" type="operSepam"/>
+      <DA fc="CF" name="ctlModel" valKind="RO" bType="Enum" type="ctlModel">
+        <Val>direct-with-normal-security</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SpcEx_Sepam204080">
+      <DA fc="ST" name="stVal" bType="BOOLEAN" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="CO" name="Oper" bType="Struct" type="operSepam"/>
+      <DA fc="CF" name="ctlModel" valKind="RO" bType="Enum" type="ctlModel">
+        <Val>direct-with-normal-security</Val>
+      </DA>
+      <DA fc="EX" name="dataNs" bType="VisString255">
+        <Val>Sepam series 20/40/60/80</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SpcStOnly_Sepam204080">
+      <DA fc="ST" name="stVal" bType="BOOLEAN" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="CF" name="ctlModel" valKind="RO" bType="Enum" type="ctlModel">
+        <Val>status-only</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SpcCoOnly_Sepam204080">
+      <DA fc="CO" name="Oper" bType="Struct" type="operSepam"/>
+      <DA fc="CF" name="ctlModel" valKind="RO" bType="Enum" type="ctlModel">
+        <Val>direct-with-normal-security</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="SPC" id="SpcCoOnlyEx_Sepam204080">
+      <DA fc="CO" name="Oper" bType="Struct" type="operSepam"/>
+      <DA fc="CF" name="ctlModel" valKind="RO" bType="Enum" type="ctlModel">
+        <Val>direct-with-normal-security</Val>
+      </DA>
+      <DA fc="EX" name="dataNs" bType="VisString255">
+        <Val>Sepam series 20/40/60/80</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DPC" id="Pos_Sepam204080_V002">
+      <DA fc="ST" name="stVal" bType="Dbpos" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="CO" name="SBOw" bType="Struct" type="operSepam"/>
+      <DA fc="CO" name="Oper" bType="Struct" type="operSepam"/>
+      <DA fc="CO" name="Cancel" bType="Struct" type="cancelSepam"/>
+      <DA fc="CF" name="ctlModel" valKind="RO" bType="Enum" type="ctlModel">
+        <Val>sbo-with-enhanced-security</Val>
+      </DA>
+      <DA fc="CF" name="sboTimeout" valKind="RO" bType="INT32U"/>
+      <DA fc="CF" name="sboClass" valKind="RO" bType="Enum" type="sboClass">
+        <Val>operate-once</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DPC" id="PosStOnly_Sepam204080">
+      <DA fc="ST" name="stVal" bType="Dbpos" dchg="true"/>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="CF" name="ctlModel" valKind="RO" bType="Enum" type="ctlModel">
+        <Val>status-only</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="INC" id="Mod_Sepam204080">
+      <DA fc="ST" name="stVal" bType="Enum" dchg="true" type="Beh">
+        <Val>off</Val>
+      </DA>
+      <DA fc="ST" name="q" bType="Quality" qchg="true"/>
+      <DA fc="ST" name="t" bType="Timestamp"/>
+      <DA fc="CF" name="ctlModel" valKind="RO" bType="Enum" type="ctlModel">
+        <Val>status-only</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="DPL" id="Dpl_Sepam204080">
+      <DA fc="DC" name="vendor" valKind="RO" bType="VisString255">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA fc="DC" name="model" valKind="RO" bType="VisString255"/>
+      <DA fc="DC" name="location" valKind="RO" bType="VisString255"/>
+    </DOType>
+    <DOType cdc="LPL" id="LplLLN0_Sepam204080">
+      <DA fc="DC" name="vendor" valKind="RO" bType="VisString255">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA fc="DC" name="swRev" valKind="RO" bType="VisString255"/>
+      <DA fc="DC" name="d" valKind="RO" bType="VisString255"/>
+      <DA fc="DC" name="configRev" valKind="RO" bType="VisString255"/>
+      <DA fc="EX" name="ldNs" bType="VisString255">
+        <Val>IEC 61850-7-4:2003</Val>
+      </DA>
+    </DOType>
+    <DOType cdc="LPL" id="Lpl_Sepam204080">
+      <DA fc="DC" name="vendor" valKind="RO" bType="VisString255">
+        <Val>Schneider Electric</Val>
+      </DA>
+      <DA fc="DC" name="swRev" valKind="RO" bType="VisString255"/>
+      <DA fc="DC" name="d" valKind="RO" bType="VisString255"/>
+    </DOType>
+    <!-- ======================================================================================
+      DATA ATTRIBUTES
+    ======================================================================================= -->
+    <DAType id="cValSepam">
+      <BDA name="mag" bType="Struct" type="analogValSepam"/>
+    </DAType>
+    <DAType id="analogValSepam">
+      <BDA bType="FLOAT32" name="f"/>
+    </DAType>
+    <DAType id="operSepam">
+      <BDA name="ctlVal" bType="BOOLEAN"/>
+      <BDA name="origin" bType="Struct" type="originatorSepam"/>
+      <BDA name="ctlNum" bType="INT8U"/>
+      <BDA name="T" bType="Timestamp"/>
+      <BDA name="Test" bType="BOOLEAN"/>
+      <BDA name="Check" bType="Check"/>
+    </DAType>
+    <DAType id="cancelSepam">
+      <BDA name="ctlVal" bType="BOOLEAN"/>
+      <BDA name="origin" bType="Struct" type="originatorSepam"/>
+      <BDA name="ctlNum" bType="INT8U"/>
+      <BDA name="T" bType="Timestamp"/>
+      <BDA name="Test" bType="BOOLEAN"/>
+    </DAType>
+    <DAType id="originatorSepam">
+      <BDA name="orCat" bType="Enum" type="orCategory"/>
+      <BDA name="orIdent" bType="Octet64"/>
+    </DAType>
+    <!-- ======================================================================================
+      ENUMERATIONS
+    ======================================================================================= -->
+    <EnumType id="Beh">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="Health">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="ctlModel">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="sboClass">
+      <EnumVal ord="0">operate-once</EnumVal>
+      <EnumVal ord="1">operate-many</EnumVal>
+    </EnumType>
+    <EnumType id="dir">
+      <EnumVal ord="0">unknown</EnumVal>
+      <EnumVal ord="1">forward</EnumVal>
+      <EnumVal ord="2">backward</EnumVal>
+      <EnumVal ord="3">both</EnumVal>
+    </EnumType>
+    <EnumType id="CBOpCap">
+      <EnumVal ord="1">None</EnumVal>
+      <EnumVal ord="2">Open</EnumVal>
+      <EnumVal ord="3">Close-Open</EnumVal>
+      <EnumVal ord="4">Open-Close-Open</EnumVal>
+      <EnumVal ord="5">Close-Open-Close-Open</EnumVal>
+    </EnumType>
+    <EnumType id="AutoRecSt">
+      <EnumVal ord="1">Ready</EnumVal>
+      <EnumVal ord="2">InProgress</EnumVal>
+      <EnumVal ord="3">Successful</EnumVal>
+    </EnumType>
+    <EnumType id="orCategory">
+      <EnumVal ord="0">not-supported</EnumVal>
+      <EnumVal ord="1">bay-control</EnumVal>
+      <EnumVal ord="2">station-control</EnumVal>
+      <EnumVal ord="3">remote-control</EnumVal>
+      <EnumVal ord="4">automatic-bay</EnumVal>
+      <EnumVal ord="5">automatic-station</EnumVal>
+      <EnumVal ord="6">automatic-remote</EnumVal>
+      <EnumVal ord="7">maintenance</EnumVal>
+      <EnumVal ord="8">process</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>

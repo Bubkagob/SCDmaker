@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Devices_Index_File>
+  <Header id="ICD library" iec61850Edition="1" company="Schneider Electric" productRange="IEC61850" productName="CET850" version="2" revision="0" date="2013-06-03"/>
+  <ModelIdentification>
+    <ModelVersion>1</ModelVersion>
+    <ModelRevision>0</ModelRevision>
+    <ModelDate>2007-05-31</ModelDate>
+  </ModelIdentification>
+  <Root_Index_File device_Type="IEC61850">
+    <Device_Family type="Gateway" name="ECI">
+      <Device_Model name="ECI850">
+        <LDevice max="9"/>
+        <AllowedLDevices modbusDeviceType="Sepam" modbusDeviceNames="series 80,series 60,series 40,series 20"/>
+        <Device_Version name="All versions" configVersion="1.0" minVer="0" icd_File="ECI/SE_Sepam_ECI850-F01_E1V06.icd"/>
+      </Device_Model>
+    </Device_Family>
+    <Device_Family type="Gtw" name="G3200">
+      <Device_Model name="G3200">
+        <LDevice max="9"/>
+        <AllowedLDevices modbusDeviceType="PowerMeter" modbusDeviceNames="PM,CM"/>
+        <AllowedLDevices modbusDeviceType="Micrologic" modbusDeviceNames="Micrologic"/>
+        <AllowedLDevices modbusDeviceType="Easergy" modbusDeviceNames="T200"/>
+        <AllowedLDevices modbusDeviceType="Sepam2000" modbusDeviceNames="Sepam2000"/>
+        <Device_Version name="All Versions" configVersion="1.0" minVer="0" icd_File="G3200/SE_ECI_G3200-F01_E1V01.icd"/>
+      </Device_Model>
+    </Device_Family>
+   <Device_Family type="Sepam" name="series 60">
+      <Device_Model name="T62">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s60/SE_Sepam_T62-F07_E1V10.icd"/>
+        <Device_Version name="From 7.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="702" icd_File="s60/SE_Sepam_T62-F06_E1V09.icd"/>
+        <Device_Version name="From 7.0 included" configVersion="5.0" minVer="700" icd_File="s60/SE_Sepam_T62-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="T60">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s60/SE_Sepam_T60-F07_E1V10.icd"/>
+        <Device_Version name="From 7.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="702" icd_File="s60/SE_Sepam_T60-F06_E1V09.icd"/>
+        <Device_Version name="From 7.0 included" configVersion="5.0" minVer="700" icd_File="s60/SE_Sepam_T60-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S62">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s60/SE_Sepam_S62-F07_E1V10.icd"/>
+        <Device_Version name="From 7.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="702" icd_File="s60/SE_Sepam_S62-F06_E1V09.icd"/>
+        <Device_Version name="From 7.0 included" configVersion="5.0" minVer="700" icd_File="s60/SE_Sepam_S62-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S60">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s60/SE_Sepam_S60-F07_E1V10.icd"/>
+        <Device_Version name="From 7.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="702" icd_File="s60/SE_Sepam_S60-F06_E1V09.icd"/>
+        <Device_Version name="From 7.0 included" configVersion="5.0" minVer="700" icd_File="s60/SE_Sepam_S60-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="M61">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s60/SE_Sepam_M61-F07_E1V10.icd"/>
+        <Device_Version name="From 7.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="702" icd_File="s60/SE_Sepam_M61-F06_E1V09.icd"/>
+        <Device_Version name="From 7.0 included" configVersion="5.0" minVer="700" icd_File="s60/SE_Sepam_M61-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="G62">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s60/SE_Sepam_G62-F07_E1V10.icd"/>
+        <Device_Version name="From 7.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="702" icd_File="s60/SE_Sepam_G62-F06_E1V09.icd"/>
+        <Device_Version name="From 7.0 included" configVersion="5.0" minVer="700" icd_File="s60/SE_Sepam_G62-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="G60">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s60/SE_Sepam_G60-F07_E1V10.icd"/>
+        <Device_Version name="From 7.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="702" icd_File="s60/SE_Sepam_G60-F06_E1V09.icd"/>
+        <Device_Version name="From 7.0 included" configVersion="5.0" minVer="700" icd_File="s60/SE_Sepam_G60-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="C60">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s60/SE_Sepam_C60-F07_E1V10.icd"/>
+        <Device_Version name="From 7.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="702" icd_File="s60/SE_Sepam_C60-F06_E1V09.icd"/>
+        <Device_Version name="From 7.0 included" configVersion="5.0" minVer="700" icd_File="s60/SE_Sepam_C60-F05_E1V08.icd"/>
+      </Device_Model>
+    </Device_Family>
+   <Device_Family type="Sepam" name="series 80">
+      <Device_Model name="Z83C">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z83C-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z83C-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z83B">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z83B-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z83B-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z83G">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z83G-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z83G-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z83M">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z83M-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z83M-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z83T">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z83T-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z83T-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z83S">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z83S-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z83S-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z83U">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z83U-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z83U-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z82C">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z82C-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z82C-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z82B">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z82B-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z82B-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z82G">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z82G-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z82G-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z82M">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z82M-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z82M-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z82T">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z82T-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z82T-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z82S">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z82S-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z82S-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z82U">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z82U-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z82U-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z81C">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z81C-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z81C-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z81B">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z81B-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z81B-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z81G">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z81G-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z81G-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z81M">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z81M-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z81M-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z81T">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z81T-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z81T-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z81S">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z81S-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z81S-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="Z81U">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_Z81U-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_Z81U-F06_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="C86">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_C86-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_C86-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_C86-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_C86-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_C86-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="B83">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_B83-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_B83-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_B83-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_B83-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_B83-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="B80">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_B80-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_B80-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_B80-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_B80-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_B80-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="G88">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_G88-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_G88-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_G88-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_G88-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_G88-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="G87">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_G87-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_G87-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_G87-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_G87-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_G87-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="G82">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_G82-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_G82-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_G82-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_G82-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_G82-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="M88">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_M88-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_M88-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_M88-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_M88-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_M88-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="M87">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_M87-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_M87-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_M87-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_M87-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_M87-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="M81">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_M81-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_M81-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_M81-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_M81-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_M81-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="T87">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_T87-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_T87-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_T87-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_T87-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_T87-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="T82">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_T82-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_T82-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_T82-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_T82-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_T82-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="T81">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_T81-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_T81-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_T81-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_T81-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_T81-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S84">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_S84-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_S84-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_S84-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_S84-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_S84-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S82">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_S82-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_S82-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_S82-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_S82-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_S82-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S81">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_S81-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_S81-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_S81-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_S81-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_S81-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S80">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="7.0" minVer="800" icd_File="s80/SE_Sepam_S80-F07_E1V09.icd"/>
+        <Device_Version name="From 6.0 included, ACE850 From 1.2 or ECI850 From 1.25" configVersion="6.0" minVer="601" icd_File="s80/SE_Sepam_S80-F06_E1V08.icd"/>
+        <Device_Version name="From 6.0 included" configVersion="3.0" minVer="600" icd_File="s80/SE_Sepam_S80-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 6.0" configVersion="2.0" minVer="500" icd_File="s80/SE_Sepam_S80-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s80/SE_Sepam_S80-F01_E1V08.icd"/>
+      </Device_Model>
+    </Device_Family>
+    <Device_Family type="Sepam" name="series 40">
+      <Device_Model name="M40">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_M40-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_M40-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S54">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S54-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S54-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S44">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S44-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S44-F05_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="T52">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_T52-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_T52-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_T52-F03_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="T50">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_T50-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_T50-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_T50-F03_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S53">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S53-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S53-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_S53-F03_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S52">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S52-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S52-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_S52-F03_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S51">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S51-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S51-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_S51-F03_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S50">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S50-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S50-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_S50-F03_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S43">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S43-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S43-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_S43-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 7.0" configVersion="2.0" minVer="500" icd_File="s40/SE_Sepam_S43-F02_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="G40">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_G40-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_G40-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_G40-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 7.0" configVersion="2.0" minVer="500" icd_File="s40/SE_Sepam_G40-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s40/SE_Sepam_G40-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="M41">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_M41-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_M41-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_M41-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 7.0" configVersion="2.0" minVer="500" icd_File="s40/SE_Sepam_M41-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s40/SE_Sepam_M41-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="T42">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_T42-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_T42-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_T42-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 7.0" configVersion="2.0" minVer="500" icd_File="s40/SE_Sepam_T42-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s40/SE_Sepam_T42-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="T40">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_T40-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_T40-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_T40-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 7.0" configVersion="2.0" minVer="500" icd_File="s40/SE_Sepam_T40-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s40/SE_Sepam_T40-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S42">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S42-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S42-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_S42-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 7.0" configVersion="2.0" minVer="500" icd_File="s40/SE_Sepam_S42-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s40/SE_Sepam_S42-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S41">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S41-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S41-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_S41-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 7.0" configVersion="2.0" minVer="500" icd_File="s40/SE_Sepam_S41-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s40/SE_Sepam_S41-F01_E1V08.icd"/>
+      </Device_Model>
+      <Device_Model name="S40">
+        <Device_Version name="From 8.0 included, ACE850 From 2.0 or ECI850 From 2.0" configVersion="6.0" minVer="802" icd_File="s40/SE_Sepam_S40-F07_E1V09.icd"/>
+        <Device_Version name="From 8.0 included" configVersion="5.0" minVer="800" icd_File="s40/SE_Sepam_S40-F05_E1V08.icd"/>
+        <Device_Version name="From 7.0 included to 8.0" configVersion="3.0" minVer="700" icd_File="s40/SE_Sepam_S40-F03_E1V08.icd"/>
+        <Device_Version name="From 5.0 included to 7.0" configVersion="2.0" minVer="500" icd_File="s40/SE_Sepam_S40-F02_E1V08.icd"/>
+        <Device_Version name="Before 5.0" configVersion="1.0" minVer="0" icd_File="s40/SE_Sepam_S40-F01_E1V08.icd"/>
+      </Device_Model>
+    </Device_Family>
+    <Device_Family type="PowerLogic" name="ION8650">
+      <Device_Model name="ION8650A">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AExp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AExp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AExp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AExp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AOnb1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AOnb1Exp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb1-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+            <Device_Model name="ION8650AOnb1Exp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb1-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+        <Device_Model name="ION8650AOnb1Exp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb1-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AOnb1Exp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb1-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AOnb2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb2-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AOnb2Exp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb2-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+            <Device_Model name="ION8650AOnb2Exp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb2-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+        <Device_Model name="ION8650AOnb2Exp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb2-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650AOnb2Exp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650A/SE_ION_8650-A-Onb2-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+        <Device_Model name="ION8650B">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BExp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BExp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BExp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BExp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BOnb1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BOnb1Exp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb1-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+            <Device_Model name="ION8650BOnb1Exp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb1-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+        <Device_Model name="ION8650BOnb1Exp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb1-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BOnb1Exp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb1-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BOnb2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb2-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BOnb2Exp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb2-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+            <Device_Model name="ION8650BOnb2Exp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb2-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+        <Device_Model name="ION8650BOnb2Exp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb2-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650BOnb2Exp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650B/SE_ION_8650-B-Onb2-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+<Device_Model name="ION8650C">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650CExp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650CExp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650CExp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650CExp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650COnb1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650COnb1Exp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb1-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+            <Device_Model name="ION8650COnb1Exp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb1-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+        <Device_Model name="ION8650COnb1Exp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb1-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650COnb1Exp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb1-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650COnb2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb2-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650COnb2Exp1">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb2-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+            <Device_Model name="ION8650COnb2Exp2">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb2-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+        <Device_Model name="ION8650COnb2Exp3">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb2-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION8650COnb2Exp4">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION8650/ION8650C/SE_ION_8650-C-Onb2-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+    </Device_Family>
+       <Device_Family type="PowerLogic" name="ION7x50">
+      <Device_Model name="ION7550">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION7550/SE_ION_7550-Onb1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7550Exp1">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7550/SE_ION_7550-Onb1-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7550Exp2">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7550/SE_ION_7550-Onb1-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7550Exp3">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7550/SE_ION_7550-Onb1-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7550Exp4">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7550/SE_ION_7550-Onb1-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7550Exp5">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7550/SE_ION_7550-Onb1-Exp5-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7550Exp6">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7550/SE_ION_7550-Onb1-Exp6-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7650">
+        <Device_Version name="All" configVersion="All" minVer="All" icd_File="ION7650/SE_ION_7650-Onb1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7650Exp1">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7650/SE_ION_7650-Onb1-Exp1-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7650Exp2">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7650/SE_ION_7650-Onb1-Exp2-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7650Exp3">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7650/SE_ION_7650-Onb1-Exp3-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7650Exp4">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7650/SE_ION_7650-Onb1-Exp4-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7650Exp5">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7650/SE_ION_7650-Onb1-Exp5-F01_E1V01.icd"/>
+      </Device_Model>
+      <Device_Model name="ION7650Exp6">
+        <Device_Version name="All" configVersion="All" minVer="All"  icd_File="ION7650/SE_ION_7650-Onb1-Exp6-F01_E1V01.icd"/>
+      </Device_Model>
+    </Device_Family>
+  </Root_Index_File>
+</Devices_Index_File>

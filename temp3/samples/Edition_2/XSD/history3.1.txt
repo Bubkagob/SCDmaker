@@ -1,0 +1,95 @@
+===============================================================
+REVISION HISTORY FOR THE SCL REVISION "2007B" (SCL version 3.1)
+FROM December 02, 2009.
+===============================================================
+
+Base version: 3.0
+
+
+CF 2009/12/02:
+  - SCL_BaseSimpleTypes.xsd: Added "tSubDataName" to model the name pattern of a sub-data (name of a SDO or SDI). It shall start with a lower-case letter, contain only letters and digits, and its length shall be at least 1 and at most 60.
+  - SCL_DataTypeTemplates.xsd: attribute "name" of "tSDO" is now of type "tSubDataName" (instead of "tRestrName1stL"): by this the maximal length is now limited to 60 characters.
+  - SCL_IED.xsd: attribute "name" of "tSDI" is now of type "tSubDataName" (instead of "tAttributeNameEnum"): by this the name of an SDI follows the same rules as an SDO (bug fix); thus, the special values starting with an upper-case letter from "tPredefinedAttributeNameEnum" are now allowed anymore and the name is limited to 60 characters.
+  - SCL_Enums.xsd: modified "tExtensionAttributeNameEnum" to allow at most 60 characters. (Thus, the name of a data attribute is now limited to 60 characters.)
+  - SCL.xsd: modified "revison" attribute of "SCL" to "B".
+  - SCL*.xsd: modified documentation annotation to indicate that it is schema version 3.1, corresponding to SCL version 2007 revision B, as an ABB internal version.
+
+CF 2009/12/03:
+  - SCL_Enums.xsd: added enumeration value "CST" to "tPredefinedCDCEnum".
+
+CF 2010/01/21:
+  - SCL_Enums.xsd: added enumeration value "EntryID" to "tPredefinedBasicTypeEnum". It represents an arbitrary OCTET STRING used to identify an entry in a sequence of events such as a log or a buffered report as specified by an SCSM, and is used in tracking services CDCs. See Part 7-2, Clause 6.1.2.7.
+
+CF 2010/02/01:
+  - SCL_Namespaces.xsd: added presence condition "C4" and "C5" to "tCondition" (required by Part 7-3 Ed. 2).
+
+CF 2010/02/02:
+  - SCL_Namespaces.xsd: added presence condition "AC_LN0_ROOT_M" to "tCondition".
+
+CF 2010/02/09:
+  - SCL_Namespaces.xsd: removed presence condition "GC_2".
+  - SCL_Namespaces.xsd: reformated documentation of presence conditions.
+  - SCL_Namespaces.xsd: Added the following new presence conditions to "tCondition":
+     - GC_1_EXCL: At most one of the DATA shall be present for a given instance of LN.
+     - GC_2_XOR(n): all or none of a group shall be present. Groups are exclusive, but one group shall be represented.
+        - GC_2_XOR_1: All or none of the DATA belonging to the same group (1) shall be present. Exclusive with GC_EXCL_2. But one group shall be present.
+        - GC_2_XOR_2: All or none of the DATA belonging to the same group (2) shall be present. Exclusive with GC_EXCL_1. But one group shall be present.
+     - GC_CON(data_attribute_name): mandatory if there is a sibling data attribute with name data_attribute_name, otherwise forbidden.
+        - GC_CON_range: mandatory if there is a sibling data attribute "range", otherwise forbidden.
+
+CF 2010/03/05:
+  - SCL_Enums.xsd: added new LN classes from Edition 2:
+      System logical nodes LN group (L): LCCH, LGOS, LSVS, LTIM, LTMS, LTRK.
+      Logical nodes for automatic control LN Group (A): ARIS.
+      Logical nodes for control LN Group (C): CSYN.
+      Logical nodes for functional blocks LN group (F) - new group "tDomainLNGroupFEnum": FCNT, FCSD, FFIL, FLIM, FPID, FRMP, FSPT, FXOT, FXUT.
+      Logical nodes for generic references LN Group (G): GLOG.
+      Logical nodes for interfacing and archiving LN Group (I): ISAF, ITPC.
+      Logical nodes for mechanical and non-electric primary equipment LN group (K) - new group "tDomainLNGroupKEnum": KFAN, KFIL, KPMP, KTNK, KVLV.
+      Logical nodes for metering and measurement LN Group (M): MENV, MFLK, MHYD, MMDC, MMET, MMTN.
+      Logical nodes for protection functions LN Group (P): PRTR, PTHF
+      Logical nodes for power quality events LN Group (Q) - new group "tDomainLNGroupQEnum": QFVR, QITR, QIUB, QVTR, QVUB, QVVR.
+      Logical nodes for protection related functions LN Group (R): RMXU.
+      Logical nodes for supervision and monitoring LN Group (S): SCBR, SLTC, SOPM, SPTR, SSWI, STMP, SVBR.
+      Logical nodes for instrument transformers and sensors LN Group (T): TANG, TAXD, TDST, TFLW, TFRQ, TGSN, THUM, TLVL, TMGF, TMVM, TPOS, TPRS, TRTN, TSND, TTMP, TTNS, TVBR, TWPH.
+      Logical nodes for further power system equipment LN Group (Z): ZRES, ZSCR, ZSMC.
+    The system LN classes (L group) are now included in enumeration "tSystemLNGroupEnum". Updated "tPredefinedLNClassEnum" accordingly. Note that tLPHDEnum and tLLN0Enum could be removed.
+    Added length constraint of 4 to all LN class groups.
+    Added new groups ("tDomainLNGroupFEnum", "tDomainLNGroupKEnum", "tDomainLNGroupQEnum") to "tPredefinedLNClassEnum".
+  - SCL_Enums.xsd: reorganized "tPredefinedCDCEnum" so that it follows the order in 7-3 (and moved new tracking service CDCs at the end). Cosmetic change, has no effect on validation.
+
+Wim 2010/03/12:
+  - SCL_Namespaces.xsd: GC_CON_rangeAng and GC_CON_SetTstRef added.
+
+
+CF 2010/04/13:
+  - SCL_IED.xsd: reversed change on type of attribute "name" of "tSDI" done on 2009/12/03. Attribute "name" of "tSDI" is again "tAttributeNameEnum" (instead of "tSubDataName") as SDI also refers to composed/struct data attributes starting with an upper case letter from the 8-1 mapping of the control model (Oper, etc.).
+
+
+CF 2010/05/06:
+  - SCL_DataTypeTemplates.xsd: added identity constraint "uniqueEnumValue" to ensure that there are no two EnumVal with same string value in an EnumType.
+
+
+CF 2010/05/07:
+  - SCL_IED.xsd: "tSampledValueControl": attribute "nofASDU" now optional with default value 1 (before: mandatory).
+
+
+CF 2010/05/27:
+  - SCL_Namespaces.xsd: default value for tNS.application now changed to "Power Utility Automation" (instead of "substation automation").
+  - SCL_Namespaces.xsd: BaseNS.fromNS now required (instead of optional with default value "IEC 61850-7-4:2003").
+  - SCL_Namespaces.xsd: Added new type tCommonLN.
+  - SCL_Namespaces.xsd: tNS: added optional sub-element CommonLN of type tCommonLN.
+  - SCL_Namespaces.xsd: tLNodeType: added optional attribute commonLN (default true).
+
+
+CF 2010/06/22:
+  - SCL_BaseTypes.xsd: added min length constraint of 1 to attribute "type" of "tPrivate".
+
+
+CF 2010/06/28:
+  - SCL*.xsd: Replaced "ABB" by "TC57 WG10" in all documentation annotations. Also updated draft date to 2010/06/28.
+
+
+===============================================================
+EOF
+===============================================================
