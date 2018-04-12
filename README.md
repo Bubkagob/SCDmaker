@@ -1,4 +1,4 @@
-# SCD maker
+# SCD tool
 simple SCD Configuration Tool based on IEC 61850 - 6
 
 1. (soon) Create Substation Configuration Description (SCD) files from devices ICD files
